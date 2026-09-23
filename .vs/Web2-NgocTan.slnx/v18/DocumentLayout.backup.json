@@ -1,7 +1,40 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "E:\\Web2-NgocTan\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{D36C8AC1-2621-3B17-69A4-60272F62361B}|Web2-NgocTan\\Web2-NgocTan.csproj|e:\\web2-ngoctan\\web2-ngoctan\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{D36C8AC1-2621-3B17-69A4-60272F62361B}|Web2-NgocTan\\Web2-NgocTan.csproj|solutionrelative:web2-ngoctan\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D36C8AC1-2621-3B17-69A4-60272F62361B}|Web2-NgocTan\\Web2-NgocTan.csproj|e:\\web2-ngoctan\\web2-ngoctan\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D36C8AC1-2621-3B17-69A4-60272F62361B}|Web2-NgocTan\\Web2-NgocTan.csproj|solutionrelative:web2-ngoctan\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D36C8AC1-2621-3B17-69A4-60272F62361B}|Web2-NgocTan\\Web2-NgocTan.csproj|e:\\web2-ngoctan\\web2-ngoctan\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D36C8AC1-2621-3B17-69A4-60272F62361B}|Web2-NgocTan\\Web2-NgocTan.csproj|solutionrelative:web2-ngoctan\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D36C8AC1-2621-3B17-69A4-60272F62361B}|Web2-NgocTan\\Web2-NgocTan.csproj|e:\\web2-ngoctan\\web2-ngoctan\\models\\domain\\book_author.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D36C8AC1-2621-3B17-69A4-60272F62361B}|Web2-NgocTan\\Web2-NgocTan.csproj|solutionrelative:web2-ngoctan\\models\\domain\\book_author.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D36C8AC1-2621-3B17-69A4-60272F62361B}|Web2-NgocTan\\Web2-NgocTan.csproj|e:\\web2-ngoctan\\web2-ngoctan\\models\\domain\\author.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D36C8AC1-2621-3B17-69A4-60272F62361B}|Web2-NgocTan\\Web2-NgocTan.csproj|solutionrelative:web2-ngoctan\\models\\domain\\author.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D36C8AC1-2621-3B17-69A4-60272F62361B}|Web2-NgocTan\\Web2-NgocTan.csproj|e:\\web2-ngoctan\\web2-ngoctan\\models\\domain\\publisher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D36C8AC1-2621-3B17-69A4-60272F62361B}|Web2-NgocTan\\Web2-NgocTan.csproj|solutionrelative:web2-ngoctan\\models\\domain\\publisher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D36C8AC1-2621-3B17-69A4-60272F62361B}|Web2-NgocTan\\Web2-NgocTan.csproj|e:\\web2-ngoctan\\web2-ngoctan\\models\\domain\\book.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D36C8AC1-2621-3B17-69A4-60272F62361B}|Web2-NgocTan\\Web2-NgocTan.csproj|solutionrelative:web2-ngoctan\\models\\domain\\book.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D36C8AC1-2621-3B17-69A4-60272F62361B}|Web2-NgocTan\\Web2-NgocTan.csproj|e:\\web2-ngoctan\\web2-ngoctan\\web2-ngoctan.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{D36C8AC1-2621-3B17-69A4-60272F62361B}|Web2-NgocTan\\Web2-NgocTan.csproj|solutionrelative:web2-ngoctan\\web2-ngoctan.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -9,7 +42,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Bookmark",
@@ -30,6 +63,110 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "E:\\Web2-NgocTan\\Web2-NgocTan\\Program.cs",
+              "RelativeDocumentMoniker": "Web2-NgocTan\\Program.cs",
+              "ToolTip": "E:\\Web2-NgocTan\\Web2-NgocTan\\Program.cs",
+              "RelativeToolTip": "Web2-NgocTan\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-23T07:41:34.498Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "E:\\Web2-NgocTan\\Web2-NgocTan\\appsettings.json",
+              "RelativeDocumentMoniker": "Web2-NgocTan\\appsettings.json",
+              "ToolTip": "E:\\Web2-NgocTan\\Web2-NgocTan\\appsettings.json",
+              "RelativeToolTip": "Web2-NgocTan\\appsettings.json",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAAAsAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-09-23T07:38:53.335Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "AppDbContext.cs",
+              "DocumentMoniker": "E:\\Web2-NgocTan\\Web2-NgocTan\\Data\\AppDbContext.cs",
+              "RelativeDocumentMoniker": "Web2-NgocTan\\Data\\AppDbContext.cs",
+              "ToolTip": "E:\\Web2-NgocTan\\Web2-NgocTan\\Data\\AppDbContext.cs",
+              "RelativeToolTip": "Web2-NgocTan\\Data\\AppDbContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB4AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-23T07:38:41.295Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Book_Author.cs",
+              "DocumentMoniker": "E:\\Web2-NgocTan\\Web2-NgocTan\\Models\\Domain\\Book_Author.cs",
+              "RelativeDocumentMoniker": "Web2-NgocTan\\Models\\Domain\\Book_Author.cs",
+              "ToolTip": "E:\\Web2-NgocTan\\Web2-NgocTan\\Models\\Domain\\Book_Author.cs",
+              "RelativeToolTip": "Web2-NgocTan\\Models\\Domain\\Book_Author.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-23T07:37:26.694Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Author.cs",
+              "DocumentMoniker": "E:\\Web2-NgocTan\\Web2-NgocTan\\Models\\Domain\\Author.cs",
+              "RelativeDocumentMoniker": "Web2-NgocTan\\Models\\Domain\\Author.cs",
+              "ToolTip": "E:\\Web2-NgocTan\\Web2-NgocTan\\Models\\Domain\\Author.cs",
+              "RelativeToolTip": "Web2-NgocTan\\Models\\Domain\\Author.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-23T07:37:04.04Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Publisher.cs",
+              "DocumentMoniker": "E:\\Web2-NgocTan\\Web2-NgocTan\\Models\\Domain\\Publisher.cs",
+              "RelativeDocumentMoniker": "Web2-NgocTan\\Models\\Domain\\Publisher.cs",
+              "ToolTip": "E:\\Web2-NgocTan\\Web2-NgocTan\\Models\\Domain\\Publisher.cs",
+              "RelativeToolTip": "Web2-NgocTan\\Models\\Domain\\Publisher.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-23T07:36:36.91Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Book.cs",
+              "DocumentMoniker": "E:\\Web2-NgocTan\\Web2-NgocTan\\Models\\Domain\\Book.cs",
+              "RelativeDocumentMoniker": "Web2-NgocTan\\Models\\Domain\\Book.cs",
+              "ToolTip": "E:\\Web2-NgocTan\\Web2-NgocTan\\Models\\Domain\\Book.cs",
+              "RelativeToolTip": "Web2-NgocTan\\Models\\Domain\\Book.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-23T07:36:07.63Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Web2-NgocTan",
+              "DocumentMoniker": "E:\\Web2-NgocTan\\Web2-NgocTan\\Web2-NgocTan.csproj",
+              "RelativeDocumentMoniker": "Web2-NgocTan\\Web2-NgocTan.csproj",
+              "ToolTip": "E:\\Web2-NgocTan\\Web2-NgocTan\\Web2-NgocTan.csproj",
+              "RelativeToolTip": "Web2-NgocTan\\Web2-NgocTan.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-09-23T07:20:25.84Z",
+              "EditorCaption": ""
             }
           ]
         },
