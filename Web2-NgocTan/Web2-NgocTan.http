@@ -1,0 +1,6 @@
+@Web2_NgocTan_HostAddress = http://localhost:5158
+
+GET {{Web2_NgocTan_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
