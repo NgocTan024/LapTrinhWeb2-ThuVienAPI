@@ -11,7 +11,7 @@
         public string? CoverUrl { get; set; }
         public DateTime DateAdded { get; set; }
 
-        // Navigation Properties
+       
         public int PublisherID { get; set; }
         public List<int> AuthorIds { get; set; }
     }

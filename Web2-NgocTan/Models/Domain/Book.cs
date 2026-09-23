@@ -15,11 +15,10 @@ namespace WebAPI_simple.Models.Domain
         public string? CoverUrl { get; set; }
         public DateTime DateAdded { get; set; }
 
-        // Navigation Properties - One publisher has many books
+      
         public int PublisherID { get; set; }
         public Publisher Publisher { get; set; }
 
-        // Navigation Properties - One book has many book_author
         public List<Book_Author> Book_Authors { get; set; }
     }
 }

@@ -16,7 +16,7 @@ namespace WebAPI_simple.Controllers
             _dbContext = dbContext;
         }
 
-        // GET: http://localhost:port/api/books/get-all-books
+       
         [HttpGet("get-all-books")]
         public IActionResult GetAll()
         {
@@ -44,7 +44,7 @@ namespace WebAPI_simple.Controllers
         [Route("get-book-by-id/{id:int}")]
         public IActionResult GetBookById([FromRoute] int id)
         {
-            // Lấy object từ DB kèm theo các bảng liên kết
+            // Lấy object từ DB
             var bookDomain = _dbContext.Books
                 .Include(b => b.Publisher)
                 .Include(b => b.Book_Authors).ThenInclude(ba => ba.Author)
