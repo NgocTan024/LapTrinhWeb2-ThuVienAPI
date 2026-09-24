@@ -165,3 +165,6 @@ E:\Web2-NgocTan\Web2-NgocTan\obj\Debug\net10.0\refint\Web2-NgocTan.dll
 E:\Web2-NgocTan\Web2-NgocTan\obj\Debug\net10.0\Web2-NgocTan.pdb
 E:\Web2-NgocTan\Web2-NgocTan\obj\Debug\net10.0\Web2-NgocTan.genruntimeconfig.cache
 E:\Web2-NgocTan\Web2-NgocTan\obj\Debug\net10.0\ref\Web2-NgocTan.dll
+E:\Web2-NgocTan\Web2-NgocTan\bin\Debug\net10.0\Swashbuckle.AspNetCore.Swagger.dll
+E:\Web2-NgocTan\Web2-NgocTan\bin\Debug\net10.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+E:\Web2-NgocTan\Web2-NgocTan\bin\Debug\net10.0\Swashbuckle.AspNetCore.SwaggerUI.dll

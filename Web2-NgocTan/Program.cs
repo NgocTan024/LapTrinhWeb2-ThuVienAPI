@@ -4,20 +4,23 @@ using WebAPI_simple.Data;
 var builder = WebApplication.CreateBuilder(args);
 
 
-
 builder.Services.AddControllers();
-https://aka.ms/aspnet/openapi
-builder.Services.AddOpenApi();
-// Register DB
+
+
+builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddSwaggerGen();
+
+
 var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
 builder.Services.AddDbContext<AppDbContext>(options =>
     options.UseSqlServer(connectionString));
-var app = builder.Build();
 
+var app = builder.Build();
 
 if (app.Environment.IsDevelopment())
 {
-    app.MapOpenApi();
+    app.UseSwagger();
+    app.UseSwaggerUI();
 }
 
 app.UseHttpsRedirection();
