@@ -150,7 +150,7 @@
         "IsRequired": true
       },
       {
-        "Name": "bookDTO",
+        "Name": "dto",
         "Type": "Web2_NgocTan.Models.DTO.AddBookRequestDTO",
         "IsRequired": true
       }

@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using Web2_NgocTan.Repositories;
 using Web2_NgocTan.Models.DTO;
+using Web2_NgocTan.Repositories;
 
 namespace Web2_NgocTan.Controllers
 {
@@ -22,33 +22,62 @@ namespace Web2_NgocTan.Controllers
             return Ok(allBooks);
         }
 
-        [HttpGet]
-        [Route("get-book-by-id/{id}")]
+        [HttpGet("get-book-by-id/{id}")]
         public IActionResult GetBookById([FromRoute] int id)
         {
-            var bookWithIdDTO = _bookRepository.GetBookById(id);
-            return Ok(bookWithIdDTO);
+            return Ok(_bookRepository.GetBookById(id));
         }
 
         [HttpPost("add-book")]
         public IActionResult AddBook([FromBody] AddBookRequestDTO addBookRequestDTO)
         {
-            var bookAdd = _bookRepository.AddBook(addBookRequestDTO);
-            return Ok(bookAdd);
+            if (ValidateAddBook(addBookRequestDTO))
+            {
+                var bookAdd = _bookRepository.AddBook(addBookRequestDTO);
+                return Ok(bookAdd);
+            }
+            return BadRequest(ModelState);
         }
 
         [HttpPut("update-book-by-id/{id}")]
-        public IActionResult UpdateBookById(int id, [FromBody] AddBookRequestDTO bookDTO)
+        public IActionResult UpdateBookById(int id, [FromBody] AddBookRequestDTO dto)
         {
-            var updateBook = _bookRepository.UpdateBookById(id, bookDTO);
-            return Ok(updateBook);
+            return Ok(_bookRepository.UpdateBookById(id, dto));
         }
 
         [HttpDelete("delete-book-by-id/{id}")]
         public IActionResult DeleteBookById(int id)
         {
-            var deleteBook = _bookRepository.DeleteBookById(id);
-            return Ok(deleteBook);
+            return Ok(_bookRepository.DeleteBookById(id));
         }
+
+        #region Private methods
+        private bool ValidateAddBook(AddBookRequestDTO addBookRequestDTO)
+        {
+            if (addBookRequestDTO == null)
+            {
+                ModelState.AddModelError(nameof(addBookRequestDTO), $"Please add book data");
+                return false;
+            }
+
+           
+            if (string.IsNullOrEmpty(addBookRequestDTO.Description))
+            {
+                ModelState.AddModelError(nameof(addBookRequestDTO.Description), $"{nameof(addBookRequestDTO.Description)} cannot be null");
+            }
+
+            
+            if (addBookRequestDTO.Rate < 0 || addBookRequestDTO.Rate > 5)
+            {
+                ModelState.AddModelError(nameof(addBookRequestDTO.Rate), $"{nameof(addBookRequestDTO.Rate)} cannot be less than 0 and more than 5");
+            }
+
+            if (ModelState.ErrorCount > 0)
+            {
+                return false;
+            }
+            return true;
+        }
+        #endregion
     }
 }
