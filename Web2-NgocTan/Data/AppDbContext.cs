@@ -1,17 +1,15 @@
-﻿using Microsoft.EntityFrameworkCore;
-using WebAPI_simple.Models.Domain;
+﻿using Web2_NgocTan.Models.Domain;
+using Microsoft.EntityFrameworkCore;
+using Web2_NgocTan.Models.Domain;
 
-namespace WebAPI_simple.Data
+namespace Web2_NgocTan.Data
 {
     public class AppDbContext : DbContext
     {
-        public AppDbContext(DbContextOptions<AppDbContext> dbContextOptions) : base(dbContextOptions)
-        {
-        }
+        public AppDbContext(DbContextOptions<AppDbContext> dbContextOptions) : base(dbContextOptions) { }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            // Định nghĩa mối quan hệ giữa các table bằng Fluent API
             modelBuilder.Entity<Book_Author>()
                 .HasOne(b => b.Book)
                 .WithMany(ba => ba.Book_Authors)

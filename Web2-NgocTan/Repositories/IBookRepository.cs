@@ -1,7 +1,7 @@
 ﻿using Web2_NgocTan.Models.Domain;
 using Web2_NgocTan.Models.DTO;
-using WebAPI_simple.Models.Domain;
-using WebAPI_simple.Models.DTO;
+using Web2_NgocTan.Models.Domain;
+using Web2_NgocTan.Models.DTO;
 
 namespace Web2_NgocTan.Repositories
 {

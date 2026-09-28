@@ -1,6 +1,85 @@
 [
   {
-    "ContainingType": "WebAPI_simple.Controllers.BooksController",
+    "ContainingType": "Web2_NgocTan.Controllers.AuthorsController",
+    "Method": "AddAuthor",
+    "RelativePath": "api/Authors/add-author",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "addAuthorRequestDTO",
+        "Type": "Web2_NgocTan.Models.DTO.AddAuthorRequestDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Web2_NgocTan.Controllers.AuthorsController",
+    "Method": "DeleteAuthorById",
+    "RelativePath": "api/Authors/delete-author-by-id/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Web2_NgocTan.Controllers.AuthorsController",
+    "Method": "GetAllAuthor",
+    "RelativePath": "api/Authors/get-all-author",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Web2_NgocTan.Controllers.AuthorsController",
+    "Method": "GetAuthorById",
+    "RelativePath": "api/Authors/get-author-by-id/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Web2_NgocTan.Controllers.AuthorsController",
+    "Method": "UpdateAuthorById",
+    "RelativePath": "api/Authors/update-author-by-id/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "authorDTO",
+        "Type": "Web2_NgocTan.Models.DTO.AuthorNoIdDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Web2_NgocTan.Controllers.BooksController",
     "Method": "AddBook",
     "RelativePath": "api/Books/add-book",
     "HttpMethod": "POST",
@@ -9,14 +88,14 @@
     "Parameters": [
       {
         "Name": "addBookRequestDTO",
-        "Type": "WebAPI_simple.Models.DTO.AddBookRequestDTO",
+        "Type": "Web2_NgocTan.Models.DTO.AddBookRequestDTO",
         "IsRequired": true
       }
     ],
     "ReturnTypes": []
   },
   {
-    "ContainingType": "WebAPI_simple.Controllers.BooksController",
+    "ContainingType": "Web2_NgocTan.Controllers.BooksController",
     "Method": "DeleteBookById",
     "RelativePath": "api/Books/delete-book-by-id/{id}",
     "HttpMethod": "DELETE",
@@ -32,7 +111,7 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "WebAPI_simple.Controllers.BooksController",
+    "ContainingType": "Web2_NgocTan.Controllers.BooksController",
     "Method": "GetAll",
     "RelativePath": "api/Books/get-all-books",
     "HttpMethod": "GET",
@@ -42,7 +121,7 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "WebAPI_simple.Controllers.BooksController",
+    "ContainingType": "Web2_NgocTan.Controllers.BooksController",
     "Method": "GetBookById",
     "RelativePath": "api/Books/get-book-by-id/{id}",
     "HttpMethod": "GET",
@@ -58,7 +137,7 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "WebAPI_simple.Controllers.BooksController",
+    "ContainingType": "Web2_NgocTan.Controllers.BooksController",
     "Method": "UpdateBookById",
     "RelativePath": "api/Books/update-book-by-id/{id}",
     "HttpMethod": "PUT",
@@ -71,8 +150,87 @@
         "IsRequired": true
       },
       {
-        "Name": "addBookRequestDTO",
-        "Type": "WebAPI_simple.Models.DTO.AddBookRequestDTO",
+        "Name": "bookDTO",
+        "Type": "Web2_NgocTan.Models.DTO.AddBookRequestDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Web2_NgocTan.Controllers.PublishersController",
+    "Method": "AddPublisher",
+    "RelativePath": "api/Publishers/add-publisher",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "addPublisherRequestDTO",
+        "Type": "Web2_NgocTan.Models.DTO.AddPublisherRequestDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Web2_NgocTan.Controllers.PublishersController",
+    "Method": "DeletePublisherById",
+    "RelativePath": "api/Publishers/delete-publisher-by-id/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Web2_NgocTan.Controllers.PublishersController",
+    "Method": "GetAllPublisher",
+    "RelativePath": "api/Publishers/get-all-publisher",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Web2_NgocTan.Controllers.PublishersController",
+    "Method": "GetPublisherById",
+    "RelativePath": "api/Publishers/get-publisher-by-id/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Web2_NgocTan.Controllers.PublishersController",
+    "Method": "UpdatePublisherById",
+    "RelativePath": "api/Publishers/update-publisher-by-id/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "publisherDTO",
+        "Type": "Web2_NgocTan.Models.DTO.PublisherNoIdDTO",
         "IsRequired": true
       }
     ],

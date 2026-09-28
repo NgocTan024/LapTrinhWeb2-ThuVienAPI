@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Web2_NgocTan.Repositories;
-using WebAPI_simple.Models.DTO;
+using Web2_NgocTan.Models.DTO;
 
 namespace Web2_NgocTan.Controllers
 {

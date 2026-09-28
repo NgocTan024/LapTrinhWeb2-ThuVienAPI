@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
-using WebAPI_simple.Data;
+using Web2_NgocTan.Data;
 
 #nullable disable
 
@@ -22,7 +22,7 @@ namespace Web2_NgocTan.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
-            modelBuilder.Entity("WebAPI_simple.Models.Domain.Author", b =>
+            modelBuilder.Entity(".Models.Domain.Author", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -39,7 +39,7 @@ namespace Web2_NgocTan.Migrations
                     b.ToTable("Authors");
                 });
 
-            modelBuilder.Entity("WebAPI_simple.Models.Domain.Book", b =>
+            modelBuilder.Entity(".Models.Domain.Book", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -84,7 +84,7 @@ namespace Web2_NgocTan.Migrations
                     b.ToTable("Books");
                 });
 
-            modelBuilder.Entity("WebAPI_simple.Models.Domain.Book_Author", b =>
+            modelBuilder.Entity(".Models.Domain.Book_Author", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -107,7 +107,7 @@ namespace Web2_NgocTan.Migrations
                     b.ToTable("Books_Authors");
                 });
 
-            modelBuilder.Entity("WebAPI_simple.Models.Domain.Publisher", b =>
+            modelBuilder.Entity(".Models.Domain.Publisher", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -124,9 +124,9 @@ namespace Web2_NgocTan.Migrations
                     b.ToTable("Publishers");
                 });
 
-            modelBuilder.Entity("WebAPI_simple.Models.Domain.Book", b =>
+            modelBuilder.Entity(".Models.Domain.Book", b =>
                 {
-                    b.HasOne("WebAPI_simple.Models.Domain.Publisher", "Publisher")
+                    b.HasOne(".Models.Domain.Publisher", "Publisher")
                         .WithMany("Books")
                         .HasForeignKey("PublisherID")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -135,15 +135,15 @@ namespace Web2_NgocTan.Migrations
                     b.Navigation("Publisher");
                 });
 
-            modelBuilder.Entity("WebAPI_simple.Models.Domain.Book_Author", b =>
+            modelBuilder.Entity(".Models.Domain.Book_Author", b =>
                 {
-                    b.HasOne("WebAPI_simple.Models.Domain.Author", "Author")
+                    b.HasOne(".Models.Domain.Author", "Author")
                         .WithMany("Book_Authors")
                         .HasForeignKey("AuthorId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("WebAPI_simple.Models.Domain.Book", "Book")
+                    b.HasOne(".Models.Domain.Book", "Book")
                         .WithMany("Book_Authors")
                         .HasForeignKey("BookId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -154,17 +154,17 @@ namespace Web2_NgocTan.Migrations
                     b.Navigation("Book");
                 });
 
-            modelBuilder.Entity("WebAPI_simple.Models.Domain.Author", b =>
+            modelBuilder.Entity(".Models.Domain.Author", b =>
                 {
                     b.Navigation("Book_Authors");
                 });
 
-            modelBuilder.Entity("WebAPI_simple.Models.Domain.Book", b =>
+            modelBuilder.Entity(".Models.Domain.Book", b =>
                 {
                     b.Navigation("Book_Authors");
                 });
 
-            modelBuilder.Entity("WebAPI_simple.Models.Domain.Publisher", b =>
+            modelBuilder.Entity(".Models.Domain.Publisher", b =>
                 {
                     b.Navigation("Books");
                 });

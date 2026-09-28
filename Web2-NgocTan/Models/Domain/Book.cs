@@ -1,10 +1,9 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using Web2_NgocTan.Models.Domain;
 
-namespace WebAPI_simple.Models.Domain
+namespace Web2_NgocTan.Models.Domain
 {
     public class Book
     {
-        [Key]
         public int Id { get; set; }
         public string Title { get; set; }
         public string Description { get; set; }
@@ -12,13 +11,10 @@ namespace WebAPI_simple.Models.Domain
         public DateTime? DateRead { get; set; }
         public int? Rate { get; set; }
         public string Genre { get; set; }
-        public string? CoverUrl { get; set; }
+        public string CoverUrl { get; set; }
         public DateTime DateAdded { get; set; }
-
-      
         public int PublisherID { get; set; }
         public Publisher Publisher { get; set; }
-
         public List<Book_Author> Book_Authors { get; set; }
     }
 }
