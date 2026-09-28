@@ -16,9 +16,9 @@ namespace Web2_NgocTan.Controllers
         }
 
         [HttpGet("get-all-books")]
-        public IActionResult GetAll()
+        public IActionResult GetAll([FromQuery] string? filterOn, [FromQuery] string? filterQuery, [FromQuery] string? sortBy, [FromQuery] bool isAscending, [FromQuery] int pageNumber = 1, [FromQuery] int pageSize = 1000)
         {
-            var allBooks = _bookRepository.GetAllBooks();
+            var allBooks = _bookRepository.GetAllBooks(filterOn, filterQuery, sortBy, isAscending, pageNumber, pageSize);
             return Ok(allBooks);
         }
 
@@ -60,13 +60,11 @@ namespace Web2_NgocTan.Controllers
                 return false;
             }
 
-           
             if (string.IsNullOrEmpty(addBookRequestDTO.Description))
             {
                 ModelState.AddModelError(nameof(addBookRequestDTO.Description), $"{nameof(addBookRequestDTO.Description)} cannot be null");
             }
 
-            
             if (addBookRequestDTO.Rate < 0 || addBookRequestDTO.Rate > 5)
             {
                 ModelState.AddModelError(nameof(addBookRequestDTO.Rate), $"{nameof(addBookRequestDTO.Rate)} cannot be less than 0 and more than 5");

@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "E:\\Web2-NgocTan\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{D36C8AC1-2621-3B17-69A4-60272F62361B}|Web2-NgocTan\\Web2-NgocTan.csproj|e:\\web2-ngoctan\\web2-ngoctan\\repositories\\sqlbookrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D36C8AC1-2621-3B17-69A4-60272F62361B}|Web2-NgocTan\\Web2-NgocTan.csproj|solutionrelative:web2-ngoctan\\repositories\\sqlbookrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{D36C8AC1-2621-3B17-69A4-60272F62361B}|Web2-NgocTan\\Web2-NgocTan.csproj|e:\\web2-ngoctan\\web2-ngoctan\\controllers\\bookscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D36C8AC1-2621-3B17-69A4-60272F62361B}|Web2-NgocTan\\Web2-NgocTan.csproj|solutionrelative:web2-ngoctan\\controllers\\bookscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D36C8AC1-2621-3B17-69A4-60272F62361B}|Web2-NgocTan\\Web2-NgocTan.csproj|e:\\web2-ngoctan\\web2-ngoctan\\repositories\\sqlbookrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D36C8AC1-2621-3B17-69A4-60272F62361B}|Web2-NgocTan\\Web2-NgocTan.csproj|solutionrelative:web2-ngoctan\\repositories\\sqlbookrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{D36C8AC1-2621-3B17-69A4-60272F62361B}|Web2-NgocTan\\Web2-NgocTan.csproj|e:\\web2-ngoctan\\web2-ngoctan\\repositories\\ibookrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -137,10 +137,6 @@
               "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
             },
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{6324226f-61b6-4f28-92ee-18d4b5fe1e48}"
-            },
-            {
               "$type": "Document",
               "DocumentIndex": 3,
               "Title": "AddBookRequestDTO.cs",
@@ -160,35 +156,40 @@
               "RelativeDocumentMoniker": "Web2-NgocTan\\Repositories\\IBookRepository.cs",
               "ToolTip": "E:\\Web2-NgocTan\\Web2-NgocTan\\Repositories\\IBookRepository.cs",
               "RelativeToolTip": "Web2-NgocTan\\Repositories\\IBookRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-24T07:27:15.704Z"
+              "WhenOpened": "2026-09-24T07:27:15.704Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "SQLBookRepository.cs",
               "DocumentMoniker": "E:\\Web2-NgocTan\\Web2-NgocTan\\Repositories\\SQLBookRepository.cs",
               "RelativeDocumentMoniker": "Web2-NgocTan\\Repositories\\SQLBookRepository.cs",
               "ToolTip": "E:\\Web2-NgocTan\\Web2-NgocTan\\Repositories\\SQLBookRepository.cs",
               "RelativeToolTip": "Web2-NgocTan\\Repositories\\SQLBookRepository.cs",
-              "ViewState": "AgIAADgAAAAAAAAAAAAvwEYAAAAMAAAAAAAAAA==",
+              "ViewState": "AgIAAH0AAAAAAAAAAAAUwJsAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-09-24T07:29:41.108Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "BooksController.cs",
               "DocumentMoniker": "E:\\Web2-NgocTan\\Web2-NgocTan\\Controllers\\BooksController.cs",
               "RelativeDocumentMoniker": "Web2-NgocTan\\Controllers\\BooksController.cs",
               "ToolTip": "E:\\Web2-NgocTan\\Web2-NgocTan\\Controllers\\BooksController.cs",
               "RelativeToolTip": "Web2-NgocTan\\Controllers\\BooksController.cs",
-              "ViewState": "AgIAADIAAAAAAAAAAAAAAD4AAAALAAAAAAAAAA==",
+              "ViewState": "AgIAADIAAAAAAAAAAAAUwFAAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-09-23T07:55:10.225Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{6324226f-61b6-4f28-92ee-18d4b5fe1e48}"
             },
             {
               "$type": "Document",
