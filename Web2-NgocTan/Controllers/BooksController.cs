@@ -16,7 +16,7 @@ namespace Web2_NgocTan.Controllers
         }
 
         [HttpGet("get-all-books")]
-        public IActionResult GetAll([FromQuery] string? filterOn, [FromQuery] string? filterQuery, [FromQuery] string? sortBy, [FromQuery] bool isAscending, [FromQuery] int pageNumber = 1, [FromQuery] int pageSize = 1000)
+        public IActionResult GetAll([FromQuery] string? filterOn, [FromQuery] string? filterQuery, [FromQuery] string? sortBy, [FromQuery] bool isAscending = true, [FromQuery] int pageNumber = 1, [FromQuery] int pageSize = 1000)
         {
             var allBooks = _bookRepository.GetAllBooks(filterOn, filterQuery, sortBy, isAscending, pageNumber, pageSize);
             return Ok(allBooks);
@@ -33,8 +33,15 @@ namespace Web2_NgocTan.Controllers
         {
             if (ValidateAddBook(addBookRequestDTO))
             {
-                var bookAdd = _bookRepository.AddBook(addBookRequestDTO);
-                return Ok(bookAdd);
+                try
+                {
+                    var bookAdd = _bookRepository.AddBook(addBookRequestDTO);
+                    return Ok(bookAdd);
+                }
+                catch (Exception ex)
+                {
+                    return BadRequest(ex.Message);
+                }
             }
             return BadRequest(ModelState);
         }
@@ -42,7 +49,19 @@ namespace Web2_NgocTan.Controllers
         [HttpPut("update-book-by-id/{id}")]
         public IActionResult UpdateBookById(int id, [FromBody] AddBookRequestDTO dto)
         {
-            return Ok(_bookRepository.UpdateBookById(id, dto));
+            try
+            {
+                var updatedBook = _bookRepository.UpdateBookById(id, dto);
+                if (updatedBook == null)
+                {
+                    return NotFound($"Không tìm thấy sách có ID = {id}");
+                }
+                return Ok(updatedBook);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
         }
 
         [HttpDelete("delete-book-by-id/{id}")]
@@ -78,4 +97,4 @@ namespace Web2_NgocTan.Controllers
         }
         #endregion
     }
-}
+}                                                               

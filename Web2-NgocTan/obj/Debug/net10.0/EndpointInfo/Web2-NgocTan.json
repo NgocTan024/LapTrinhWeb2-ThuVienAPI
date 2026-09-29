@@ -167,7 +167,8 @@
             "name": "isAscending",
             "in": "query",
             "schema": {
-              "type": "boolean"
+              "type": "boolean",
+              "default": true
             }
           },
           {

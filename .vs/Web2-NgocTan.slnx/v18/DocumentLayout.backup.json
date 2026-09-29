@@ -144,9 +144,10 @@
               "RelativeDocumentMoniker": "Web2-NgocTan\\Models\\DTO\\AddBookRequestDTO.cs",
               "ToolTip": "E:\\Web2-NgocTan\\Web2-NgocTan\\Models\\DTO\\AddBookRequestDTO.cs",
               "RelativeToolTip": "Web2-NgocTan\\Models\\DTO\\AddBookRequestDTO.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAcwBgAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAowBgAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-24T07:58:41.698Z"
+              "WhenOpened": "2026-09-24T07:58:41.698Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -169,7 +170,7 @@
               "RelativeDocumentMoniker": "Web2-NgocTan\\Repositories\\SQLBookRepository.cs",
               "ToolTip": "E:\\Web2-NgocTan\\Web2-NgocTan\\Repositories\\SQLBookRepository.cs",
               "RelativeToolTip": "Web2-NgocTan\\Repositories\\SQLBookRepository.cs",
-              "ViewState": "AgIAAH0AAAAAAAAAAAAUwJsAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAJgAAAAAAAAAAAAUwLYAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-09-24T07:29:41.108Z",
               "EditorCaption": ""
@@ -182,7 +183,7 @@
               "RelativeDocumentMoniker": "Web2-NgocTan\\Controllers\\BooksController.cs",
               "ToolTip": "E:\\Web2-NgocTan\\Web2-NgocTan\\Controllers\\BooksController.cs",
               "RelativeToolTip": "Web2-NgocTan\\Controllers\\BooksController.cs",
-              "ViewState": "AgIAADIAAAAAAAAAAAAUwFAAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAFMAAAAAAAAAAAAiwGMAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-09-23T07:55:10.225Z",
               "EditorCaption": ""
@@ -450,10 +451,6 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
               "WhenOpened": "2026-09-23T07:20:25.84Z"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{6324226f-61b6-4f28-92ee-18d4b5fe1e48}"
             }
           ]
         },

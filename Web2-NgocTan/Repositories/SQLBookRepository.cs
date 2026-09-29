@@ -30,7 +30,6 @@ namespace Web2_NgocTan.Repositories
                 AuthorNames = Books.Book_Authors.Select(n => n.Author.FullName).ToList()
             }).AsQueryable();
 
-            // 1. Filtering (Lọc dữ liệu)
             if (string.IsNullOrWhiteSpace(filterOn) == false && string.IsNullOrWhiteSpace(filterQuery) == false)
             {
                 if (filterOn.Equals("title", StringComparison.OrdinalIgnoreCase))
@@ -39,7 +38,6 @@ namespace Web2_NgocTan.Repositories
                 }
             }
 
-            // 2. Sorting (Sắp xếp)
             if (string.IsNullOrWhiteSpace(sortBy) == false)
             {
                 if (sortBy.Equals("title", StringComparison.OrdinalIgnoreCase))
@@ -48,7 +46,6 @@ namespace Web2_NgocTan.Repositories
                 }
             }
 
-            // 3. Pagination (Phân trang)
             var skipResults = (pageNumber - 1) * pageSize;
             return allBooks.Skip(skipResults).Take(pageSize).ToList();
         }
@@ -75,6 +72,21 @@ namespace Web2_NgocTan.Repositories
 
         public AddBookRequestDTO AddBook(AddBookRequestDTO addBookRequestDTO)
         {
+            var publisherExists = _dbContext.Publishers.Any(n => n.Id == addBookRequestDTO.PublisherID);
+            if (!publisherExists)
+            {
+                throw new Exception("NXB không tồn tại!");
+            }
+
+            foreach (var id in addBookRequestDTO.AuthorIds)
+            {
+                var authorExists = _dbContext.Authors.Any(n => n.Id == id);
+                if (!authorExists)
+                {
+                    throw new Exception($"Tác giả có ID = {id} không tồn tại!");
+                }
+            }
+
             var bookDomainModel = new Book
             {
                 Title = addBookRequestDTO.Title,
@@ -106,6 +118,21 @@ namespace Web2_NgocTan.Repositories
 
         public AddBookRequestDTO? UpdateBookById(int id, AddBookRequestDTO bookDTO)
         {
+            var publisherExists = _dbContext.Publishers.Any(n => n.Id == bookDTO.PublisherID);
+            if (!publisherExists)
+            {
+                throw new Exception("NXB không tồn tại!");
+            }
+
+            foreach (var authorId in bookDTO.AuthorIds)
+            {
+                var authorExists = _dbContext.Authors.Any(n => n.Id == authorId);
+                if (!authorExists)
+                {
+                    throw new Exception($"Tác giả có ID = {authorId} không tồn tại!");
+                }
+            }
+
             var bookDomain = _dbContext.Books.FirstOrDefault(n => n.Id == id);
             if (bookDomain != null)
             {
