@@ -168,3 +168,15 @@ E:\Web2-NgocTan\Web2-NgocTan\obj\Debug\net10.0\ref\Web2-NgocTan.dll
 E:\Web2-NgocTan\Web2-NgocTan\bin\Debug\net10.0\Swashbuckle.AspNetCore.Swagger.dll
 E:\Web2-NgocTan\Web2-NgocTan\bin\Debug\net10.0\Swashbuckle.AspNetCore.SwaggerGen.dll
 E:\Web2-NgocTan\Web2-NgocTan\bin\Debug\net10.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+E:\Web2-NgocTan\Web2-NgocTan\bin\Debug\net10.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+E:\Web2-NgocTan\Web2-NgocTan\bin\Debug\net10.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+E:\Web2-NgocTan\Web2-NgocTan\bin\Debug\net10.0\Microsoft.Bcl.Cryptography.dll
+E:\Web2-NgocTan\Web2-NgocTan\bin\Debug\net10.0\Serilog.dll
+E:\Web2-NgocTan\Web2-NgocTan\bin\Debug\net10.0\Serilog.AspNetCore.dll
+E:\Web2-NgocTan\Web2-NgocTan\bin\Debug\net10.0\Serilog.Extensions.Hosting.dll
+E:\Web2-NgocTan\Web2-NgocTan\bin\Debug\net10.0\Serilog.Extensions.Logging.dll
+E:\Web2-NgocTan\Web2-NgocTan\bin\Debug\net10.0\Serilog.Formatting.Compact.dll
+E:\Web2-NgocTan\Web2-NgocTan\bin\Debug\net10.0\Serilog.Settings.Configuration.dll
+E:\Web2-NgocTan\Web2-NgocTan\bin\Debug\net10.0\Serilog.Sinks.Console.dll
+E:\Web2-NgocTan\Web2-NgocTan\bin\Debug\net10.0\Serilog.Sinks.Debug.dll
+E:\Web2-NgocTan\Web2-NgocTan\bin\Debug\net10.0\Serilog.Sinks.File.dll

@@ -1,0 +1,10 @@
+2026-10-01 14:28:34.688 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7276/api/Authors/get-all-author - null null
+2026-10-01 14:28:34.737 +07:00 [INF] Executing endpoint 'Web2_NgocTan.Controllers.AuthorsController.GetAllAuthor (Web2-NgocTan)'
+2026-10-01 14:28:34.739 +07:00 [INF] Route matched with {action = "GetAllAuthor", controller = "Authors"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAllAuthor() on controller Web2_NgocTan.Controllers.AuthorsController (Web2-NgocTan).
+2026-10-01 14:28:34.843 +07:00 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[FullName]
+FROM [Authors] AS [a]
+2026-10-01 14:28:34.847 +07:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Web2_NgocTan.Models.DTO.AuthorDTO, Web2-NgocTan, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-10-01 14:28:34.849 +07:00 [INF] Executed action Web2_NgocTan.Controllers.AuthorsController.GetAllAuthor (Web2-NgocTan) in 108.6669ms
+2026-10-01 14:28:34.850 +07:00 [INF] Executed endpoint 'Web2_NgocTan.Controllers.AuthorsController.GetAllAuthor (Web2-NgocTan)'
+2026-10-01 14:28:34.850 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7276/api/Authors/get-all-author - 200 null application/json; charset=utf-8 162.2148ms

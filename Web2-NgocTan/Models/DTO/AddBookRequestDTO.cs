@@ -5,9 +5,9 @@ namespace Web2_NgocTan.Models.DTO
     public class AddBookRequestDTO
     {
         [Required]
-        [MinLength(10)]
+        [MinLength(1)]
         public string Title { get; set; }
-
+        [MinLength(1)]
         public string Description { get; set; }
         public bool IsRead { get; set; }
         public DateTime? DateRead { get; set; }
