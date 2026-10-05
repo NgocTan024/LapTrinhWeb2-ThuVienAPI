@@ -1,0 +1,46 @@
+﻿@model Library_web.Models.DTO.BookDTO
+
+<h1>Thông tin sách:</h1>
+<div class="clearfix">
+    <img src="@Model.CoverUrl" style="float:left; width:200px; margin-right:15px;" alt="Book Cover" />
+    <p><strong>Tên sách:</strong> @Model.Title</p>
+    <p><strong>Mô tả:</strong> @Model.Description</p>
+    <p><strong>Date read:</strong> @Model.DateRead</p>
+    <p>
+        <strong>Is Read?:</strong>
+        @if (Model.IsRead)
+        {
+            <input type="radio" name="isRead" checked disabled /> <label>Read</label>
+            <input type="radio" name="isRead" disabled /> <label>Not Read</label>
+        }
+        else
+        {
+            <input type="radio" name="isRead" disabled /> <label>Read</label>
+            <input type="radio" name="isRead" checked disabled /> <label>Not Read</label>
+        }
+    </p>
+    <p>
+        <strong>Review:</strong>
+        @if (Model.IsRead)
+        {
+            for (var star = 0; star < (Model.Rate ?? 0); star++)
+            {
+                <span>⭐</span>
+            }
+        }
+        else
+        {
+            <span>Not yet read</span>
+        }
+    </p>
+    <p><strong>Thể loại:</strong> @Model.Genre</p>
+    <p><strong>Date added:</strong> @Model.DateAdded</p>
+    <p><strong>Nhà xuất bản:</strong> @Model.PublisherName</p>
+    <p>
+        <strong>Tác giả:</strong>
+        @foreach (var authorName in Model.AuthorNames)
+        {
+            <a href="#linktacgia" class="me-2">@authorName</a>
+        }
+    </p>
+</div>

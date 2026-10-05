@@ -1,0 +1,10 @@
+2026-10-05 09:01:30.252 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7276/api/Images - null null
+2026-10-05 09:01:30.258 +07:00 [INF] Executing endpoint 'Web2_NgocTan.Controllers.ImagesController.GetAllInfoImages (Web2-NgocTan)'
+2026-10-05 09:01:30.262 +07:00 [INF] Route matched with {action = "GetAllInfoImages", controller = "Images"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAllInfoImages() on controller Web2_NgocTan.Controllers.ImagesController (Web2-NgocTan).
+2026-10-05 09:01:30.322 +07:00 [INF] Executed DbCommand (7ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [i].[Id], [i].[FileDescription], [i].[FileExtension], [i].[FileName], [i].[FilePath], [i].[FileSizeInBytes]
+FROM [Images] AS [i]
+2026-10-05 09:01:30.327 +07:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Web2_NgocTan.Models.Domain.Image, Web2-NgocTan, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-10-05 09:01:30.338 +07:00 [INF] Executed action Web2_NgocTan.Controllers.ImagesController.GetAllInfoImages (Web2-NgocTan) in 74.7062ms
+2026-10-05 09:01:30.339 +07:00 [INF] Executed endpoint 'Web2_NgocTan.Controllers.ImagesController.GetAllInfoImages (Web2-NgocTan)'
+2026-10-05 09:01:30.340 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7276/api/Images - 200 null application/json; charset=utf-8 88.1253ms

@@ -1,0 +1,35 @@
+2026-10-05 09:00:23.452 +07:00 [INF] User profile is available. Using 'C:\Users\User\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-10-05 09:00:23.745 +07:00 [INF] Now listening on: https://localhost:7276
+2026-10-05 09:00:23.747 +07:00 [INF] Now listening on: http://localhost:5158
+2026-10-05 09:00:23.818 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-10-05 09:00:23.819 +07:00 [INF] Hosting environment: Development
+2026-10-05 09:00:23.820 +07:00 [INF] Content root path: E:\Web2-NgocTan\Web2-NgocTan
+2026-10-05 09:00:24.367 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7276/swagger/index.html - null null
+2026-10-05 09:00:24.572 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7276/swagger/index.html - 304 null null 217.6547ms
+2026-10-05 09:00:24.591 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7276/swagger/swagger-ui-bundle.js - null null
+2026-10-05 09:00:24.591 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7276/swagger/swagger-ui.css - null null
+2026-10-05 09:00:24.592 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7276/swagger/index.css - null null
+2026-10-05 09:00:24.622 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7276/swagger/swagger-ui-bundle.js - 304 null null 30.3717ms
+2026-10-05 09:00:24.622 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7276/swagger/swagger-ui.css - 304 null null 30.4194ms
+2026-10-05 09:00:24.634 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7276/swagger/index.js - null null
+2026-10-05 09:00:24.622 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7276/swagger/index.css - 304 null null 30.3643ms
+2026-10-05 09:00:24.631 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7276/swagger/swagger-ui-standalone-preset.js - null null
+2026-10-05 09:00:24.636 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7276/swagger/index.js - 304 null null 2.4643ms
+2026-10-05 09:00:24.639 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7276/_framework/aspnetcore-browser-refresh.js - null null
+2026-10-05 09:00:24.653 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7276/_vs/browserLink - null null
+2026-10-05 09:00:24.654 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7276/swagger/swagger-ui-standalone-preset.js - 304 null null 23.432ms
+2026-10-05 09:00:24.674 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7276/_framework/aspnetcore-browser-refresh.js - 200 16509 application/javascript; charset=utf-8 34.9473ms
+2026-10-05 09:00:24.701 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7276/_vs/browserLink - 200 null text/javascript; charset=UTF-8 47.9425ms
+2026-10-05 09:00:24.754 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7276/swagger/v1/swagger.json - null null
+2026-10-05 09:00:24.772 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7276/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 17.0277ms
+2026-10-05 09:00:53.365 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7276/api/Images/Download?id=1 - null null
+2026-10-05 09:00:53.463 +07:00 [INF] Executing endpoint 'Web2_NgocTan.Controllers.ImagesController.DownloadImage (Web2-NgocTan)'
+2026-10-05 09:00:53.477 +07:00 [INF] Route matched with {action = "DownloadImage", controller = "Images"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult DownloadImage(Int32) on controller Web2_NgocTan.Controllers.ImagesController (Web2-NgocTan).
+2026-10-05 09:00:54.723 +07:00 [INF] Executed DbCommand (36ms) [Parameters=[@Id='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [i].[Id], [i].[FileDescription], [i].[FileExtension], [i].[FileName], [i].[FilePath], [i].[FileSizeInBytes]
+FROM [Images] AS [i]
+WHERE [i].[Id] = @Id
+2026-10-05 09:00:54.790 +07:00 [INF] Executing FileContentResult, sending file with download name 'TấnMũmMĩm.jpg' ...
+2026-10-05 09:00:54.806 +07:00 [INF] Executed action Web2_NgocTan.Controllers.ImagesController.DownloadImage (Web2-NgocTan) in 1324.0972ms
+2026-10-05 09:00:54.807 +07:00 [INF] Executed endpoint 'Web2_NgocTan.Controllers.ImagesController.DownloadImage (Web2-NgocTan)'
+2026-10-05 09:00:54.818 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7276/api/Images/Download?id=1 - 200 116943 application/octet-stream 1452.6948ms

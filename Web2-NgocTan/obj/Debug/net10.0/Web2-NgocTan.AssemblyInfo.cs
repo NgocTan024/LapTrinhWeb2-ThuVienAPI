@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Web2-NgocTan")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+28c4ad50ee80fb66e364e3bbcba2459274e70a71")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4af3e447b440c41123b9bdcf399f26c8e538caa9")]
 [assembly: System.Reflection.AssemblyProductAttribute("Web2-NgocTan")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Web2-NgocTan")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

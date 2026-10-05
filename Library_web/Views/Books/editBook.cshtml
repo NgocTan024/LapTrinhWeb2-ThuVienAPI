@@ -1,0 +1,66 @@
+﻿@model Library_web.Models.DTO.editBookDTO
+@{
+    var currentBook = ViewBag.Book;
+    var authors = ViewBag.listAuthor;
+    var publishers = ViewBag.listPublisher;
+}
+
+<h2>Edit book:</h2>
+<form asp-controller="Books" asp-action="editBook" asp-route-id="@currentBook.Id" method="POST">
+    <label>Title</label>
+    <input type="text" name="Title" asp-for="Title" value="@currentBook.Title" class="form-control mb-2" required minlength="10" />
+
+    <label>Description</label>
+    <input type="text" name="Description" asp-for="Description" value="@currentBook.Description" class="form-control mb-2" required />
+
+    <label>IsRead</label>
+    @if (currentBook.IsRead == true)
+    {
+        <input type="radio" name="IsRead" value="True" checked /> <label>Yes</label>
+        <input type="radio" name="IsRead" value="False" /> <label>No</label><br class="mb-2" />
+    }
+    else
+    {
+        <input type="radio" name="IsRead" value="True" /> <label>Yes</label>
+        <input type="radio" name="IsRead" value="False" checked /> <label>No</label><br class="mb-2" />
+    }
+
+    <label>DateRead</label>
+    <input type="datetime" name="DateRead" asp-for="DateRead" value="@currentBook.DateRead" class="form-control mb-2" />
+
+    <label>Rate</label>
+    <input type="number" name="Rate" asp-for="Rate" value="@currentBook.Rate" min="0" max="5" class="form-control mb-2" />
+
+    <label>Genre</label>
+    <input type="text" name="Genre" asp-for="Genre" value="@currentBook.Genre" class="form-control mb-2" />
+
+    <label>Cover Url</label>
+    <input type="text" name="CoverUrl" asp-for="CoverUrl" value="@currentBook.CoverUrl" class="form-control mb-2" />
+
+    <label>DateAdded:</label>
+    <input type="datetime" name="DateAdded" asp-for="DateAdded" value="@currentBook.DateAdded" class="form-control mb-2" />
+
+    <label>Publisher: </label> <span>(@currentBook.PublisherName)</span>
+    <select name="PublisherID" class="form-select mb-2">
+        @if (publishers != null)
+        {
+            foreach (var pubItem in publishers)
+            {
+                <option value="@pubItem.Id">@pubItem.Name</option>
+            }
+        }
+    </select>
+
+    <label>Author: </label>
+    <select name="AuthorIds" multiple class="form-select mb-3">
+        @if (authors != null)
+        {
+            foreach (var authItem in authors)
+            {
+                <option value="@authItem.Id">@authItem.FullName</option>
+            }
+        }
+    </select>
+
+    <input type="submit" value="Save" class="btn btn-success" />
+</form>

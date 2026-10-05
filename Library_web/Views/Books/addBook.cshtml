@@ -1,0 +1,63 @@
+﻿@model Library_web.Models.DTO.addBookDTO
+@{
+    var authors = ViewBag.listAuthor;
+    var publishers = ViewBag.listPublisher;
+}
+
+<h2>Add Book</h2>
+@if (ViewBag.Error != null)
+{
+    <p class="text-danger">@ViewBag.Error</p>
+}
+
+<form asp-controller="Books" asp-action="addBook" method="POST">
+    <label>Title (ít nhất 10 ký tự)</label>
+    <input type="text" asp-for="title" class="form-control mb-2" required minlength="10" />
+    <span asp-validation-for="title" class="text-danger"></span>
+
+    <label>Description</label>
+    <input type="text" asp-for="description" class="form-control mb-2" required />
+
+    <label>IsRead</label>
+    <input type="radio" asp-for="isRead" value="True" /> Yes
+    <input type="radio" asp-for="isRead" value="False" checked /> No <br class="mb-2" />
+
+    <label>DateRead</label>
+    <input type="date" asp-for="dateRead" class="form-control mb-2" />
+
+    <label>Rate (0 - 5)</label>
+    <input type="number" asp-for="rate" min="0" max="5" class="form-control mb-2" />
+
+    <label>Genre</label>
+    <input type="text" asp-for="genre" class="form-control mb-2" required />
+
+    <label>Cover Url</label>
+    <input type="text" asp-for="coverUrl" class="form-control mb-2" required />
+
+    <label>DateAdded:</label>
+    <input type="date" asp-for="dateAdded" class="form-control mb-2" required />
+
+    <label>Publisher:</label>
+    <select name="publisherID" class="form-select mb-2">
+        @if (publishers != null)
+        {
+            foreach (var pubItem in publishers)
+            {
+                <option value="@pubItem.Id">@pubItem.Name</option>
+            }
+        }
+    </select>
+
+    <label>Author (Giữ Ctrl để chọn nhiều):</label>
+    <select name="authorIds" multiple class="form-select mb-3">
+        @if (authors != null)
+        {
+            foreach (var authItem in authors)
+            {
+                <option value="@authItem.Id">@authItem.FullName</option>
+            }
+        }
+    </select>
+
+    <input type="submit" value="Submit" class="btn btn-primary" />
+</form>

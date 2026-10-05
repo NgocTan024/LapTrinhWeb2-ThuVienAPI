@@ -1,0 +1,15 @@
+[
+  {
+    "Name": "New Profile",
+    "Projects": [
+      {
+        "Path": "Web2-NgocTan\\Web2-NgocTan.csproj",
+        "Action": "Start"
+      },
+      {
+        "Path": "Library_web\\Library_web.csproj",
+        "Action": "Start"
+      }
+    ]
+  }
+]

@@ -1,0 +1,20 @@
+2026-10-01 14:51:35.246 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7276/swagger/index.html - null null
+2026-10-01 14:51:35.255 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7276/swagger/index.html - 304 null null 9.1711ms
+2026-10-01 14:51:35.268 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7276/swagger/swagger-ui.css - null null
+2026-10-01 14:51:35.272 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7276/_framework/aspnetcore-browser-refresh.js - null null
+2026-10-01 14:51:35.268 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7276/swagger/swagger-ui-bundle.js - null null
+2026-10-01 14:51:35.272 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7276/swagger/index.css - null null
+2026-10-01 14:51:35.317 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7276/swagger/swagger-ui.css - 304 null null 49.308ms
+2026-10-01 14:51:35.277 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7276/swagger/swagger-ui-standalone-preset.js - null null
+2026-10-01 14:51:35.281 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7276/swagger/index.js - null null
+2026-10-01 14:51:35.283 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7276/_vs/browserLink - null null
+2026-10-01 14:51:35.323 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7276/_framework/aspnetcore-browser-refresh.js - 200 16509 application/javascript; charset=utf-8 51.2264ms
+2026-10-01 14:51:35.324 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7276/swagger/swagger-ui-bundle.js - 304 null null 56.3962ms
+2026-10-01 14:51:35.326 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7276/swagger/index.css - 304 null null 54.0798ms
+2026-10-01 14:51:35.331 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7276/swagger/swagger-ui-standalone-preset.js - 304 null null 54.6621ms
+2026-10-01 14:51:35.333 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7276/swagger/index.js - 304 null null 52.1159ms
+2026-10-01 14:51:35.346 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7276/_vs/browserLink - 200 null text/javascript; charset=UTF-8 62.4639ms
+2026-10-01 14:51:35.423 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7276/swagger/v1/swagger.json - null null
+2026-10-01 14:51:35.434 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7276/swagger/favicon-32x32.png - null null
+2026-10-01 14:51:35.436 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7276/swagger/favicon-32x32.png - 304 null null 1.9901ms
+2026-10-01 14:51:35.441 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7276/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 17.319ms

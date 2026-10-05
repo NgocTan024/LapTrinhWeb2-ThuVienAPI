@@ -1,3 +1,4 @@
 <Solution>
+  <Project Path="Library_web/Library_web.csproj" Id="bdef63be-85ee-4501-8195-a6de3dbd4fb8" />
   <Project Path="Web2-NgocTan/Web2-NgocTan.csproj" />
 </Solution>

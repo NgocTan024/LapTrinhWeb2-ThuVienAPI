@@ -1,0 +1,11 @@
+2026-10-05 08:59:18.397 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7276/api/Images/Download?id=1 - null null
+2026-10-05 08:59:18.498 +07:00 [INF] Executing endpoint 'Web2_NgocTan.Controllers.ImagesController.DownloadImage (Web2-NgocTan)'
+2026-10-05 08:59:18.514 +07:00 [INF] Route matched with {action = "DownloadImage", controller = "Images"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult DownloadImage(Int32) on controller Web2_NgocTan.Controllers.ImagesController (Web2-NgocTan).
+2026-10-05 08:59:19.745 +07:00 [INF] Executed DbCommand (35ms) [Parameters=[@Id='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [i].[Id], [i].[FileDescription], [i].[FileExtension], [i].[FileName], [i].[FilePath], [i].[FileSizeInBytes]
+FROM [Images] AS [i]
+WHERE [i].[Id] = @Id
+2026-10-05 08:59:19.806 +07:00 [INF] Executing FileContentResult, sending file with download name 'TấnMũmMĩm.jpg' ...
+2026-10-05 08:59:19.823 +07:00 [INF] Executed action Web2_NgocTan.Controllers.ImagesController.DownloadImage (Web2-NgocTan) in 1303.6098ms
+2026-10-05 08:59:19.824 +07:00 [INF] Executed endpoint 'Web2_NgocTan.Controllers.ImagesController.DownloadImage (Web2-NgocTan)'
+2026-10-05 08:59:19.834 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7276/api/Images/Download?id=1 - 200 130020 application/octet-stream 1436.7752ms
