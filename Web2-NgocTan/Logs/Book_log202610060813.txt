@@ -1,0 +1,107 @@
+2026-10-06 08:13:08.098 +07:00 [INF] User profile is available. Using 'C:\Users\User\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-10-06 08:13:08.540 +07:00 [INF] Now listening on: https://localhost:7276
+2026-10-06 08:13:08.543 +07:00 [INF] Now listening on: http://localhost:5158
+2026-10-06 08:13:08.639 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-10-06 08:13:08.658 +07:00 [INF] Hosting environment: Development
+2026-10-06 08:13:08.660 +07:00 [INF] Content root path: E:\Web2-NgocTan\Web2-NgocTan
+2026-10-06 08:13:09.117 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7276/swagger/index.html - null null
+2026-10-06 08:13:09.403 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7276/swagger/index.html - 304 null null 302.3273ms
+2026-10-06 08:13:09.427 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7276/swagger/swagger-ui.css - null null
+2026-10-06 08:13:09.427 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7276/swagger/swagger-ui-bundle.js - null null
+2026-10-06 08:13:09.427 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7276/swagger/index.css - null null
+2026-10-06 08:13:09.453 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7276/swagger/index.css - 304 null null 25.0935ms
+2026-10-06 08:13:09.453 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7276/swagger/swagger-ui.css - 304 null null 25.4907ms
+2026-10-06 08:13:09.453 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7276/swagger/swagger-ui-bundle.js - 304 null null 25.1897ms
+2026-10-06 08:13:09.496 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7276/swagger/index.js - null null
+2026-10-06 08:13:09.496 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7276/swagger/swagger-ui-standalone-preset.js - null null
+2026-10-06 08:13:09.504 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7276/swagger/index.js - 304 null null 7.4136ms
+2026-10-06 08:13:09.515 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7276/_vs/browserLink - null null
+2026-10-06 08:13:09.515 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7276/_framework/aspnetcore-browser-refresh.js - null null
+2026-10-06 08:13:09.516 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7276/swagger/swagger-ui-standalone-preset.js - 304 null null 19.4021ms
+2026-10-06 08:13:09.544 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7276/_framework/aspnetcore-browser-refresh.js - 200 16509 application/javascript; charset=utf-8 28.8597ms
+2026-10-06 08:13:09.562 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7276/_vs/browserLink - 200 null text/javascript; charset=UTF-8 46.1581ms
+2026-10-06 08:13:09.673 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7276/swagger/v1/swagger.json - null null
+2026-10-06 08:13:09.704 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7276/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 31.3484ms
+2026-10-06 08:13:11.448 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:7276/api/Authors/get-all-author - null null
+2026-10-06 08:13:11.498 +07:00 [INF] Executing endpoint 'Web2_NgocTan.Controllers.AuthorsController.GetAllAuthor (Web2-NgocTan)'
+2026-10-06 08:13:11.509 +07:00 [INF] Route matched with {action = "GetAllAuthor", controller = "Authors"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAllAuthor() on controller Web2_NgocTan.Controllers.AuthorsController (Web2-NgocTan).
+2026-10-06 08:13:12.582 +07:00 [INF] Executed DbCommand (20ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[FullName]
+FROM [Authors] AS [a]
+2026-10-06 08:13:12.605 +07:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Web2_NgocTan.Models.DTO.AuthorDTO, Web2-NgocTan, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-10-06 08:13:12.619 +07:00 [INF] Executed action Web2_NgocTan.Controllers.AuthorsController.GetAllAuthor (Web2-NgocTan) in 1105.8105ms
+2026-10-06 08:13:12.620 +07:00 [INF] Executed endpoint 'Web2_NgocTan.Controllers.AuthorsController.GetAllAuthor (Web2-NgocTan)'
+2026-10-06 08:13:12.628 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:7276/api/Authors/get-all-author - 200 null application/json; charset=utf-8 1180.9058ms
+2026-10-06 08:13:16.076 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:7276/api/Publishers/get-all-publisher - null null
+2026-10-06 08:13:16.080 +07:00 [INF] Executing endpoint 'Web2_NgocTan.Controllers.PublishersController.GetAllPublisher (Web2-NgocTan)'
+2026-10-06 08:13:16.082 +07:00 [INF] Route matched with {action = "GetAllPublisher", controller = "Publishers"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAllPublisher() on controller Web2_NgocTan.Controllers.PublishersController (Web2-NgocTan).
+2026-10-06 08:13:16.133 +07:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[Name]
+FROM [Publishers] AS [p]
+2026-10-06 08:13:16.136 +07:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Web2_NgocTan.Models.DTO.PublisherDTO, Web2-NgocTan, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-10-06 08:13:16.137 +07:00 [INF] Executed action Web2_NgocTan.Controllers.PublishersController.GetAllPublisher (Web2-NgocTan) in 54.2915ms
+2026-10-06 08:13:16.138 +07:00 [INF] Executed endpoint 'Web2_NgocTan.Controllers.PublishersController.GetAllPublisher (Web2-NgocTan)'
+2026-10-06 08:13:16.140 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:7276/api/Publishers/get-all-publisher - 200 null application/json; charset=utf-8 63.8623ms
+2026-10-06 08:13:17.487 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:7276/api/Publishers/get-publisher-by-id/1 - null null
+2026-10-06 08:13:17.492 +07:00 [INF] Executing endpoint 'Web2_NgocTan.Controllers.PublishersController.GetPublisherById (Web2-NgocTan)'
+2026-10-06 08:13:17.499 +07:00 [INF] Route matched with {action = "GetPublisherById", controller = "Publishers"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetPublisherById(Int32) on controller Web2_NgocTan.Controllers.PublishersController (Web2-NgocTan).
+2026-10-06 08:13:17.693 +07:00 [INF] Executed DbCommand (32ms) [Parameters=[@id='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [p].[Id], [p].[Name]
+FROM [Publishers] AS [p]
+WHERE [p].[Id] = @id
+2026-10-06 08:13:17.737 +07:00 [INF] Executing OkObjectResult, writing value of type 'Web2_NgocTan.Models.DTO.PublisherNoIdDTO'.
+2026-10-06 08:13:17.739 +07:00 [INF] Executed action Web2_NgocTan.Controllers.PublishersController.GetPublisherById (Web2-NgocTan) in 239.4905ms
+2026-10-06 08:13:17.740 +07:00 [INF] Executed endpoint 'Web2_NgocTan.Controllers.PublishersController.GetPublisherById (Web2-NgocTan)'
+2026-10-06 08:13:17.741 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:7276/api/Publishers/get-publisher-by-id/1 - 200 null application/json; charset=utf-8 254.5691ms
+2026-10-06 08:13:19.309 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:7276/api/Publishers/get-all-publisher - null null
+2026-10-06 08:13:19.312 +07:00 [INF] Executing endpoint 'Web2_NgocTan.Controllers.PublishersController.GetAllPublisher (Web2-NgocTan)'
+2026-10-06 08:13:19.312 +07:00 [INF] Route matched with {action = "GetAllPublisher", controller = "Publishers"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAllPublisher() on controller Web2_NgocTan.Controllers.PublishersController (Web2-NgocTan).
+2026-10-06 08:13:19.362 +07:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[Name]
+FROM [Publishers] AS [p]
+2026-10-06 08:13:19.364 +07:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Web2_NgocTan.Models.DTO.PublisherDTO, Web2-NgocTan, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-10-06 08:13:19.365 +07:00 [INF] Executed action Web2_NgocTan.Controllers.PublishersController.GetAllPublisher (Web2-NgocTan) in 51.3827ms
+2026-10-06 08:13:19.366 +07:00 [INF] Executed endpoint 'Web2_NgocTan.Controllers.PublishersController.GetAllPublisher (Web2-NgocTan)'
+2026-10-06 08:13:19.367 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:7276/api/Publishers/get-all-publisher - 200 null application/json; charset=utf-8 57.8002ms
+2026-10-06 08:13:20.314 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:7276/api/Publishers/get-publisher-by-id/5 - null null
+2026-10-06 08:13:20.316 +07:00 [INF] Executing endpoint 'Web2_NgocTan.Controllers.PublishersController.GetPublisherById (Web2-NgocTan)'
+2026-10-06 08:13:20.317 +07:00 [INF] Route matched with {action = "GetPublisherById", controller = "Publishers"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetPublisherById(Int32) on controller Web2_NgocTan.Controllers.PublishersController (Web2-NgocTan).
+2026-10-06 08:13:20.360 +07:00 [INF] Executed DbCommand (5ms) [Parameters=[@id='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [p].[Id], [p].[Name]
+FROM [Publishers] AS [p]
+WHERE [p].[Id] = @id
+2026-10-06 08:13:20.362 +07:00 [INF] Executing OkObjectResult, writing value of type 'Web2_NgocTan.Models.DTO.PublisherNoIdDTO'.
+2026-10-06 08:13:20.363 +07:00 [INF] Executed action Web2_NgocTan.Controllers.PublishersController.GetPublisherById (Web2-NgocTan) in 46.0386ms
+2026-10-06 08:13:20.364 +07:00 [INF] Executed endpoint 'Web2_NgocTan.Controllers.PublishersController.GetPublisherById (Web2-NgocTan)'
+2026-10-06 08:13:20.365 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:7276/api/Publishers/get-publisher-by-id/5 - 200 null application/json; charset=utf-8 51.6925ms
+2026-10-06 08:13:21.712 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:7276/api/Publishers/get-all-publisher - null null
+2026-10-06 08:13:21.714 +07:00 [INF] Executing endpoint 'Web2_NgocTan.Controllers.PublishersController.GetAllPublisher (Web2-NgocTan)'
+2026-10-06 08:13:21.714 +07:00 [INF] Route matched with {action = "GetAllPublisher", controller = "Publishers"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAllPublisher() on controller Web2_NgocTan.Controllers.PublishersController (Web2-NgocTan).
+2026-10-06 08:13:21.758 +07:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[Name]
+FROM [Publishers] AS [p]
+2026-10-06 08:13:21.760 +07:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Web2_NgocTan.Models.DTO.PublisherDTO, Web2-NgocTan, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-10-06 08:13:21.761 +07:00 [INF] Executed action Web2_NgocTan.Controllers.PublishersController.GetAllPublisher (Web2-NgocTan) in 45.942ms
+2026-10-06 08:13:21.762 +07:00 [INF] Executed endpoint 'Web2_NgocTan.Controllers.PublishersController.GetAllPublisher (Web2-NgocTan)'
+2026-10-06 08:13:21.763 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:7276/api/Publishers/get-all-publisher - 200 null application/json; charset=utf-8 51.469ms
+2026-10-06 08:13:26.201 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:7276/api/Authors/get-all-author - null null
+2026-10-06 08:13:26.205 +07:00 [INF] Executing endpoint 'Web2_NgocTan.Controllers.AuthorsController.GetAllAuthor (Web2-NgocTan)'
+2026-10-06 08:13:26.206 +07:00 [INF] Route matched with {action = "GetAllAuthor", controller = "Authors"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAllAuthor() on controller Web2_NgocTan.Controllers.AuthorsController (Web2-NgocTan).
+2026-10-06 08:13:26.250 +07:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[FullName]
+FROM [Authors] AS [a]
+2026-10-06 08:13:26.252 +07:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Web2_NgocTan.Models.DTO.AuthorDTO, Web2-NgocTan, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-10-06 08:13:26.254 +07:00 [INF] Executed action Web2_NgocTan.Controllers.AuthorsController.GetAllAuthor (Web2-NgocTan) in 46.9502ms
+2026-10-06 08:13:26.255 +07:00 [INF] Executed endpoint 'Web2_NgocTan.Controllers.AuthorsController.GetAllAuthor (Web2-NgocTan)'
+2026-10-06 08:13:26.256 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:7276/api/Authors/get-all-author - 200 null application/json; charset=utf-8 54.5602ms
+2026-10-06 08:13:27.547 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:7276/api/Authors/get-author-by-id/3 - null null
+2026-10-06 08:13:27.548 +07:00 [INF] Executing endpoint 'Web2_NgocTan.Controllers.AuthorsController.GetAuthorById (Web2-NgocTan)'
+2026-10-06 08:13:27.552 +07:00 [INF] Route matched with {action = "GetAuthorById", controller = "Authors"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAuthorById(Int32) on controller Web2_NgocTan.Controllers.AuthorsController (Web2-NgocTan).
+2026-10-06 08:13:27.603 +07:00 [INF] Executed DbCommand (5ms) [Parameters=[@id='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[FullName]
+FROM [Authors] AS [a]
+WHERE [a].[Id] = @id
+2026-10-06 08:13:27.610 +07:00 [INF] Executing OkObjectResult, writing value of type 'Web2_NgocTan.Models.DTO.AuthorNoIdDTO'.
+2026-10-06 08:13:27.611 +07:00 [INF] Executed action Web2_NgocTan.Controllers.AuthorsController.GetAuthorById (Web2-NgocTan) in 58.3245ms
+2026-10-06 08:13:27.612 +07:00 [INF] Executed endpoint 'Web2_NgocTan.Controllers.AuthorsController.GetAuthorById (Web2-NgocTan)'
+2026-10-06 08:13:27.614 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:7276/api/Authors/get-author-by-id/3 - 200 null application/json; charset=utf-8 66.9862ms

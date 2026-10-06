@@ -1,0 +1,14 @@
+﻿@model Library_web.Models.DTO.publisherNoIdDTO
+@{
+    var pub = ViewBag.Publisher;
+}
+
+<h2>Chỉnh sửa Nhà xuất bản</h2>
+<form asp-controller="Publishers" asp-action="editPublisher" asp-route-id="@pub.Id" method="POST">
+    <div class="mb-3">
+        <label>Tên Nhà xuất bản (Name):</label>
+        <input type="text" name="Name" value="@pub.Name" class="form-control" required />
+    </div>
+    <input type="submit" value="Cập nhật" class="btn btn-primary" />
+    <a asp-controller="Publishers" asp-action="Index" class="btn btn-secondary">Hủy</a>
+</form>

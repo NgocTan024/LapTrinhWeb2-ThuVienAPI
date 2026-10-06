@@ -1,0 +1,90 @@
+2026-10-06 08:05:11.939 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:7276/api/Books/get-all-books?filterOn=&filterQuery=&sortBy=&isAscending=True - null null
+2026-10-06 08:05:11.949 +07:00 [INF] Executing endpoint 'Web2_NgocTan.Controllers.BooksController.GetAll (Web2-NgocTan)'
+2026-10-06 08:05:11.950 +07:00 [INF] Route matched with {action = "GetAll", controller = "Books"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAll(System.String, System.String, System.String, Boolean, Int32, Int32) on controller Web2_NgocTan.Controllers.BooksController (Web2-NgocTan).
+2026-10-06 08:05:11.952 +07:00 [INF] GetAll Book Action method was invoked
+2026-10-06 08:05:11.952 +07:00 [WRN] This is a warning log
+2026-10-06 08:05:11.953 +07:00 [ERR] This is a error log
+2026-10-06 08:05:12.011 +07:00 [INF] Executed DbCommand (12ms) [Parameters=[@p='?' (DbType = Int32), @p1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [b0].[Id], [b0].[Title], [b0].[Description], [b0].[IsRead], CASE
+    WHEN [b0].[IsRead] = CAST(1 AS bit) THEN [b0].[DateRead]
+END, CASE
+    WHEN [b0].[IsRead] = CAST(1 AS bit) THEN [b0].[Rate]
+END, [b0].[Genre], [b0].[CoverUrl], [p].[Name], [p].[Id], [s].[FullName], [s].[Id], [s].[Id0]
+FROM (
+    SELECT [b].[Id], [b].[CoverUrl], [b].[DateRead], [b].[Description], [b].[Genre], [b].[IsRead], [b].[PublisherID], [b].[Rate], [b].[Title]
+    FROM [Books] AS [b]
+    ORDER BY (SELECT 1)
+    OFFSET @p ROWS FETCH NEXT @p1 ROWS ONLY
+) AS [b0]
+INNER JOIN [Publishers] AS [p] ON [b0].[PublisherID] = [p].[Id]
+LEFT JOIN (
+    SELECT [a].[FullName], [b1].[Id], [a].[Id] AS [Id0], [b1].[BookId]
+    FROM [Books_Authors] AS [b1]
+    INNER JOIN [Authors] AS [a] ON [b1].[AuthorId] = [a].[Id]
+) AS [s] ON [b0].[Id] = [s].[BookId]
+ORDER BY [b0].[Id], [p].[Id], [s].[Id]
+2026-10-06 08:05:12.013 +07:00 [INF] Finished GetAllBook request with data [{"Id":9,"Title":"L\u00E0m \u0110\u0129-V\u0169 Tr\u1ECDng Ph\u1EE5ng","Description":"Truy\u1EC7n ng\u1EAFn","IsRead":true,"DateRead":"2026-09-30T08:33:53.456","Rate":5,"Genre":"V\u0103n H\u1ECDc","CoverUrl":"string","PublisherName":"Nh\u00E0 xu\u1EA5t b\u1EA3n Tr\u1EBB","AuthorNames":["V\u0169 Tr\u1ECDng Ph\u1EE5ng"]},{"Id":10,"Title":"A","Description":"Hehe","IsRead":true,"DateRead":"2026-09-30T09:05:15.804","Rate":5,"Genre":"Truy\u1EC7n \u01B0\u1EDDi","CoverUrl":"string","PublisherName":"T\u00E2n 1 c\u00FA","AuthorNames":["T\u00E2n"]}]
+2026-10-06 08:05:12.014 +07:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Web2_NgocTan.Models.DTO.BookWithAuthorAndPublisherDTO, Web2-NgocTan, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-10-06 08:05:12.016 +07:00 [INF] Executed action Web2_NgocTan.Controllers.BooksController.GetAll (Web2-NgocTan) in 64.6578ms
+2026-10-06 08:05:12.017 +07:00 [INF] Executed endpoint 'Web2_NgocTan.Controllers.BooksController.GetAll (Web2-NgocTan)'
+2026-10-06 08:05:12.018 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:7276/api/Books/get-all-books?filterOn=&filterQuery=&sortBy=&isAscending=True - 200 null application/json; charset=utf-8 79.2092ms
+2026-10-06 08:05:15.236 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:7276/api/Authors/get-all-author - null null
+2026-10-06 08:05:15.241 +07:00 [INF] Executing endpoint 'Web2_NgocTan.Controllers.AuthorsController.GetAllAuthor (Web2-NgocTan)'
+2026-10-06 08:05:15.243 +07:00 [INF] Route matched with {action = "GetAllAuthor", controller = "Authors"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAllAuthor() on controller Web2_NgocTan.Controllers.AuthorsController (Web2-NgocTan).
+2026-10-06 08:05:15.348 +07:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[FullName]
+FROM [Authors] AS [a]
+2026-10-06 08:05:15.351 +07:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Web2_NgocTan.Models.DTO.AuthorDTO, Web2-NgocTan, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-10-06 08:05:15.353 +07:00 [INF] Executed action Web2_NgocTan.Controllers.AuthorsController.GetAllAuthor (Web2-NgocTan) in 108.0852ms
+2026-10-06 08:05:15.353 +07:00 [INF] Executed endpoint 'Web2_NgocTan.Controllers.AuthorsController.GetAllAuthor (Web2-NgocTan)'
+2026-10-06 08:05:15.354 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:7276/api/Authors/get-all-author - 200 null application/json; charset=utf-8 117.8689ms
+2026-10-06 08:05:37.638 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:7276/api/Publishers/get-all-publisher - null null
+2026-10-06 08:05:37.640 +07:00 [INF] Executing endpoint 'Web2_NgocTan.Controllers.PublishersController.GetAllPublisher (Web2-NgocTan)'
+2026-10-06 08:05:37.644 +07:00 [INF] Route matched with {action = "GetAllPublisher", controller = "Publishers"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAllPublisher() on controller Web2_NgocTan.Controllers.PublishersController (Web2-NgocTan).
+2026-10-06 08:05:37.712 +07:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[Name]
+FROM [Publishers] AS [p]
+2026-10-06 08:05:37.714 +07:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Web2_NgocTan.Models.DTO.PublisherDTO, Web2-NgocTan, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-10-06 08:05:37.715 +07:00 [INF] Executed action Web2_NgocTan.Controllers.PublishersController.GetAllPublisher (Web2-NgocTan) in 69.7514ms
+2026-10-06 08:05:37.716 +07:00 [INF] Executed endpoint 'Web2_NgocTan.Controllers.PublishersController.GetAllPublisher (Web2-NgocTan)'
+2026-10-06 08:05:37.718 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:7276/api/Publishers/get-all-publisher - 200 null application/json; charset=utf-8 79.7552ms
+2026-10-06 08:05:47.950 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:7276/api/Books/get-all-books?filterOn=&filterQuery=&sortBy=&isAscending=True - null null
+2026-10-06 08:05:47.952 +07:00 [INF] Executing endpoint 'Web2_NgocTan.Controllers.BooksController.GetAll (Web2-NgocTan)'
+2026-10-06 08:05:47.954 +07:00 [INF] Route matched with {action = "GetAll", controller = "Books"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAll(System.String, System.String, System.String, Boolean, Int32, Int32) on controller Web2_NgocTan.Controllers.BooksController (Web2-NgocTan).
+2026-10-06 08:05:47.957 +07:00 [INF] GetAll Book Action method was invoked
+2026-10-06 08:05:47.958 +07:00 [WRN] This is a warning log
+2026-10-06 08:05:47.958 +07:00 [ERR] This is a error log
+2026-10-06 08:05:48.009 +07:00 [INF] Executed DbCommand (11ms) [Parameters=[@p='?' (DbType = Int32), @p1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [b0].[Id], [b0].[Title], [b0].[Description], [b0].[IsRead], CASE
+    WHEN [b0].[IsRead] = CAST(1 AS bit) THEN [b0].[DateRead]
+END, CASE
+    WHEN [b0].[IsRead] = CAST(1 AS bit) THEN [b0].[Rate]
+END, [b0].[Genre], [b0].[CoverUrl], [p].[Name], [p].[Id], [s].[FullName], [s].[Id], [s].[Id0]
+FROM (
+    SELECT [b].[Id], [b].[CoverUrl], [b].[DateRead], [b].[Description], [b].[Genre], [b].[IsRead], [b].[PublisherID], [b].[Rate], [b].[Title]
+    FROM [Books] AS [b]
+    ORDER BY (SELECT 1)
+    OFFSET @p ROWS FETCH NEXT @p1 ROWS ONLY
+) AS [b0]
+INNER JOIN [Publishers] AS [p] ON [b0].[PublisherID] = [p].[Id]
+LEFT JOIN (
+    SELECT [a].[FullName], [b1].[Id], [a].[Id] AS [Id0], [b1].[BookId]
+    FROM [Books_Authors] AS [b1]
+    INNER JOIN [Authors] AS [a] ON [b1].[AuthorId] = [a].[Id]
+) AS [s] ON [b0].[Id] = [s].[BookId]
+ORDER BY [b0].[Id], [p].[Id], [s].[Id]
+2026-10-06 08:05:48.011 +07:00 [INF] Finished GetAllBook request with data [{"Id":9,"Title":"L\u00E0m \u0110\u0129-V\u0169 Tr\u1ECDng Ph\u1EE5ng","Description":"Truy\u1EC7n ng\u1EAFn","IsRead":true,"DateRead":"2026-09-30T08:33:53.456","Rate":5,"Genre":"V\u0103n H\u1ECDc","CoverUrl":"string","PublisherName":"Nh\u00E0 xu\u1EA5t b\u1EA3n Tr\u1EBB","AuthorNames":["V\u0169 Tr\u1ECDng Ph\u1EE5ng"]},{"Id":10,"Title":"A","Description":"Hehe","IsRead":true,"DateRead":"2026-09-30T09:05:15.804","Rate":5,"Genre":"Truy\u1EC7n \u01B0\u1EDDi","CoverUrl":"string","PublisherName":"T\u00E2n 1 c\u00FA","AuthorNames":["T\u00E2n"]}]
+2026-10-06 08:05:48.012 +07:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Web2_NgocTan.Models.DTO.BookWithAuthorAndPublisherDTO, Web2-NgocTan, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-10-06 08:05:48.012 +07:00 [INF] Executed action Web2_NgocTan.Controllers.BooksController.GetAll (Web2-NgocTan) in 56.5986ms
+2026-10-06 08:05:48.013 +07:00 [INF] Executed endpoint 'Web2_NgocTan.Controllers.BooksController.GetAll (Web2-NgocTan)'
+2026-10-06 08:05:48.015 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:7276/api/Books/get-all-books?filterOn=&filterQuery=&sortBy=&isAscending=True - 200 null application/json; charset=utf-8 65.0513ms
+2026-10-06 08:05:48.607 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:7276/api/Authors/get-all-author - null null
+2026-10-06 08:05:48.611 +07:00 [INF] Executing endpoint 'Web2_NgocTan.Controllers.AuthorsController.GetAllAuthor (Web2-NgocTan)'
+2026-10-06 08:05:48.612 +07:00 [INF] Route matched with {action = "GetAllAuthor", controller = "Authors"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAllAuthor() on controller Web2_NgocTan.Controllers.AuthorsController (Web2-NgocTan).
+2026-10-06 08:05:48.663 +07:00 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[FullName]
+FROM [Authors] AS [a]
+2026-10-06 08:05:48.665 +07:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Web2_NgocTan.Models.DTO.AuthorDTO, Web2-NgocTan, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-10-06 08:05:48.666 +07:00 [INF] Executed action Web2_NgocTan.Controllers.AuthorsController.GetAllAuthor (Web2-NgocTan) in 52.4626ms
+2026-10-06 08:05:48.667 +07:00 [INF] Executed endpoint 'Web2_NgocTan.Controllers.AuthorsController.GetAllAuthor (Web2-NgocTan)'
+2026-10-06 08:05:48.668 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:7276/api/Authors/get-all-author - 200 null application/json; charset=utf-8 61.2363ms

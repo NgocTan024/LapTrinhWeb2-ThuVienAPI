@@ -1,0 +1,6 @@
+﻿@model Library_web.Models.DTO.authorDTO
+
+<h2>Chi tiết Tác giả</h2>
+<p><strong>Mã tác giả (ID):</strong> @Model.Id</p>
+<p><strong>Họ và tên:</strong> @Model.FullName</p>
+<a asp-controller="Authors" asp-action="Index" class="btn btn-secondary">Quay lại danh sách</a>

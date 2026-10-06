@@ -1,0 +1,20 @@
+2026-10-06 08:20:01.043 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:7276/api/Authors/get-all-author - null null
+2026-10-06 08:20:01.052 +07:00 [INF] Executing endpoint 'Web2_NgocTan.Controllers.AuthorsController.GetAllAuthor (Web2-NgocTan)'
+2026-10-06 08:20:01.053 +07:00 [INF] Route matched with {action = "GetAllAuthor", controller = "Authors"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAllAuthor() on controller Web2_NgocTan.Controllers.AuthorsController (Web2-NgocTan).
+2026-10-06 08:20:01.161 +07:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[FullName]
+FROM [Authors] AS [a]
+2026-10-06 08:20:01.163 +07:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Web2_NgocTan.Models.DTO.AuthorDTO, Web2-NgocTan, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-10-06 08:20:01.164 +07:00 [INF] Executed action Web2_NgocTan.Controllers.AuthorsController.GetAllAuthor (Web2-NgocTan) in 109.7035ms
+2026-10-06 08:20:01.165 +07:00 [INF] Executed endpoint 'Web2_NgocTan.Controllers.AuthorsController.GetAllAuthor (Web2-NgocTan)'
+2026-10-06 08:20:01.166 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:7276/api/Authors/get-all-author - 200 null application/json; charset=utf-8 122.8896ms
+2026-10-06 08:20:02.739 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:7276/api/Authors/get-all-author - null null
+2026-10-06 08:20:02.741 +07:00 [INF] Executing endpoint 'Web2_NgocTan.Controllers.AuthorsController.GetAllAuthor (Web2-NgocTan)'
+2026-10-06 08:20:02.742 +07:00 [INF] Route matched with {action = "GetAllAuthor", controller = "Authors"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAllAuthor() on controller Web2_NgocTan.Controllers.AuthorsController (Web2-NgocTan).
+2026-10-06 08:20:02.789 +07:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[FullName]
+FROM [Authors] AS [a]
+2026-10-06 08:20:02.791 +07:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Web2_NgocTan.Models.DTO.AuthorDTO, Web2-NgocTan, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-10-06 08:20:02.793 +07:00 [INF] Executed action Web2_NgocTan.Controllers.AuthorsController.GetAllAuthor (Web2-NgocTan) in 48.7887ms
+2026-10-06 08:20:02.794 +07:00 [INF] Executed endpoint 'Web2_NgocTan.Controllers.AuthorsController.GetAllAuthor (Web2-NgocTan)'
+2026-10-06 08:20:02.795 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:7276/api/Authors/get-all-author - 200 null application/json; charset=utf-8 56.8232ms

@@ -1,6 +1,10 @@
 ﻿@model IEnumerable<Library_web.Models.DTO.BookDTO>
 
 <h2>List all books</h2>
+@if (ViewBag.Error != null)
+{
+    <div class="alert alert-danger">Lỗi gọi API: @ViewBag.Error</div>
+}
 
 <form asp-controller="Books" asp-action="Index" method="GET" class="mb-3">
     <label>Tìm kiếm sách: </label>

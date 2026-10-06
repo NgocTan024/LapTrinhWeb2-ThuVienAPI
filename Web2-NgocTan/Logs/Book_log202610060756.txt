@@ -1,0 +1,40 @@
+2026-10-06 07:56:46.225 +07:00 [INF] User profile is available. Using 'C:\Users\User\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-10-06 07:56:46.544 +07:00 [INF] Now listening on: https://localhost:7276
+2026-10-06 07:56:46.545 +07:00 [INF] Now listening on: http://localhost:5158
+2026-10-06 07:56:46.772 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-10-06 07:56:46.774 +07:00 [INF] Hosting environment: Development
+2026-10-06 07:56:46.775 +07:00 [INF] Content root path: E:\Web2-NgocTan\Web2-NgocTan
+2026-10-06 07:56:47.546 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7276/swagger/index.html - null null
+2026-10-06 07:56:47.722 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7276/swagger/index.html - 304 null null 186.8829ms
+2026-10-06 07:56:47.737 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7276/swagger/swagger-ui.css - null null
+2026-10-06 07:56:47.737 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7276/swagger/index.css - null null
+2026-10-06 07:56:47.737 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7276/swagger/swagger-ui-bundle.js - null null
+2026-10-06 07:56:47.761 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7276/swagger/index.css - 304 null null 23.8159ms
+2026-10-06 07:56:47.761 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7276/swagger/swagger-ui.css - 304 null null 23.8161ms
+2026-10-06 07:56:47.761 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7276/swagger/swagger-ui-bundle.js - 304 null null 23.894ms
+2026-10-06 07:56:47.769 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7276/swagger/swagger-ui-standalone-preset.js - null null
+2026-10-06 07:56:47.772 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7276/swagger/index.js - null null
+2026-10-06 07:56:47.784 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7276/swagger/swagger-ui-standalone-preset.js - 304 null null 15.5208ms
+2026-10-06 07:56:47.787 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7276/swagger/index.js - 304 null null 15.5976ms
+2026-10-06 07:56:47.791 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7276/_framework/aspnetcore-browser-refresh.js - null null
+2026-10-06 07:56:47.798 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7276/_vs/browserLink - null null
+2026-10-06 07:56:47.805 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7276/_framework/aspnetcore-browser-refresh.js - 200 16509 application/javascript; charset=utf-8 14.1946ms
+2026-10-06 07:56:47.832 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7276/_vs/browserLink - 200 null text/javascript; charset=UTF-8 34.5271ms
+2026-10-06 07:56:48.014 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7276/swagger/v1/swagger.json - null null
+2026-10-06 07:56:48.036 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7276/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 21.8736ms
+2026-10-06 07:56:51.659 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:7276/api/Books/get-all-books?filterOn=&filterQuery=&sortBy=&isAscending=True - null null
+2026-10-06 07:56:51.713 +07:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Read)
+2026-10-06 07:56:51.718 +07:00 [INF] AuthenticationScheme: Bearer was challenged.
+2026-10-06 07:56:51.723 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:7276/api/Books/get-all-books?filterOn=&filterQuery=&sortBy=&isAscending=True - 401 0 null 64.3367ms
+2026-10-06 07:56:58.441 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:7276/api/Authors/get-all-author - null null
+2026-10-06 07:56:58.447 +07:00 [INF] Executing endpoint 'Web2_NgocTan.Controllers.AuthorsController.GetAllAuthor (Web2-NgocTan)'
+2026-10-06 07:56:58.461 +07:00 [INF] Route matched with {action = "GetAllAuthor", controller = "Authors"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAllAuthor() on controller Web2_NgocTan.Controllers.AuthorsController (Web2-NgocTan).
+2026-10-06 07:56:59.461 +07:00 [INF] Executed DbCommand (21ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[FullName]
+FROM [Authors] AS [a]
+2026-10-06 07:56:59.484 +07:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Web2_NgocTan.Models.DTO.AuthorDTO, Web2-NgocTan, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-10-06 07:56:59.495 +07:00 [INF] Executed action Web2_NgocTan.Controllers.AuthorsController.GetAllAuthor (Web2-NgocTan) in 1028.1482ms
+2026-10-06 07:56:59.496 +07:00 [INF] Executed endpoint 'Web2_NgocTan.Controllers.AuthorsController.GetAllAuthor (Web2-NgocTan)'
+2026-10-06 07:56:59.503 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:7276/api/Authors/get-all-author - 200 null application/json; charset=utf-8 1062.6428ms

@@ -1,0 +1,13 @@
+2026-10-05 10:09:30.113 +07:00 [INF] Request starting HTTP/2 POST https://localhost:7276/api/Images/Upload - multipart/form-data; boundary=----WebKitFormBoundary6DFnIfydr9qE3wEJ 578029
+2026-10-05 10:09:31.105 +07:00 [INF] Executing endpoint 'Web2_NgocTan.Controllers.ImagesController.Upload (Web2-NgocTan)'
+2026-10-05 10:09:31.124 +07:00 [INF] Route matched with {action = "Upload", controller = "Images"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Upload(Web2_NgocTan.Models.DTO.ImageUploadRequestDTO) on controller Web2_NgocTan.Controllers.ImagesController (Web2-NgocTan).
+2026-10-05 10:09:32.743 +07:00 [INF] Executed DbCommand (73ms) [Parameters=[@p0='?' (Size = 4000), @p1='?' (Size = 4000), @p2='?' (Size = 4000), @p3='?' (Size = 4000), @p4='?' (DbType = Int64)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Images] ([FileDescription], [FileExtension], [FileName], [FilePath], [FileSizeInBytes])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3, @p4);
+2026-10-05 10:09:32.783 +07:00 [INF] Executing OkObjectResult, writing value of type 'Web2_NgocTan.Models.Domain.Image'.
+2026-10-05 10:09:32.798 +07:00 [INF] Executed action Web2_NgocTan.Controllers.ImagesController.Upload (Web2-NgocTan) in 1670.164ms
+2026-10-05 10:09:32.800 +07:00 [INF] Executed endpoint 'Web2_NgocTan.Controllers.ImagesController.Upload (Web2-NgocTan)'
+2026-10-05 10:09:32.809 +07:00 [INF] Request finished HTTP/2 POST https://localhost:7276/api/Images/Upload - 200 null application/json; charset=utf-8 2696.4418ms

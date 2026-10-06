@@ -1,0 +1,22 @@
+2026-10-06 07:58:14.508 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7276/api/Books/get-all-books?filterOn=title&filterQuery=a&sortBy=id&isAscending=true&pageNumber=1&pageSize=10 - null null
+2026-10-06 07:58:14.513 +07:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Read)
+2026-10-06 07:58:14.525 +07:00 [INF] AuthenticationScheme: Bearer was challenged.
+2026-10-06 07:58:14.529 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7276/api/Books/get-all-books?filterOn=title&filterQuery=a&sortBy=id&isAscending=true&pageNumber=1&pageSize=10 - 401 0 null 20.8253ms
+2026-10-06 07:58:36.748 +07:00 [INF] Request starting HTTP/2 POST https://localhost:7276/api/User/Login - application/json 47
+2026-10-06 07:58:36.749 +07:00 [INF] Executing endpoint 'Web2_NgocTan.Controllers.UserController.Login (Web2-NgocTan)'
+2026-10-06 07:58:36.765 +07:00 [INF] Route matched with {action = "Login", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(Web2_NgocTan.Models.DTO.LoginRequestDTO) on controller Web2_NgocTan.Controllers.UserController (Web2-NgocTan).
+2026-10-06 07:58:37.146 +07:00 [INF] Executed DbCommand (94ms) [Parameters=[@normalizedEmail='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @normalizedEmail
+2026-10-06 07:58:37.382 +07:00 [INF] Executed DbCommand (8ms) [Parameters=[@userId='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @userId
+2026-10-06 07:58:37.439 +07:00 [INF] Executing OkObjectResult, writing value of type 'Web2_NgocTan.Models.DTO.LoginResponseDTO'.
+2026-10-06 07:58:37.442 +07:00 [INF] Executed action Web2_NgocTan.Controllers.UserController.Login (Web2-NgocTan) in 675.657ms
+2026-10-06 07:58:37.443 +07:00 [INF] Executed endpoint 'Web2_NgocTan.Controllers.UserController.Login (Web2-NgocTan)'
+2026-10-06 07:58:37.445 +07:00 [INF] Request finished HTTP/2 POST https://localhost:7276/api/User/Login - 200 null application/json; charset=utf-8 697.2366ms

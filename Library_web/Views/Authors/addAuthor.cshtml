@@ -1,0 +1,11 @@
+﻿@model Library_web.Models.DTO.authorNoIdDTO
+
+<h2>Thêm Tác giả mới</h2>
+<form asp-controller="Authors" asp-action="addAuthor" method="POST">
+    <div class="mb-3">
+        <label>Họ và tên tác giả (FullName):</label>
+        <input type="text" asp-for="FullName" class="form-control" required />
+    </div>
+    <input type="submit" value="Lưu" class="btn btn-success" />
+    <a asp-controller="Authors" asp-action="Index" class="btn btn-secondary">Hủy</a>
+</form>

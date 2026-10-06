@@ -1,0 +1,57 @@
+2026-10-06 08:25:08.344 +07:00 [INF] Request starting HTTP/2 POST https://localhost:7276/api/User/Login - application/json 46
+2026-10-06 08:25:08.348 +07:00 [INF] Executing endpoint 'Web2_NgocTan.Controllers.UserController.Login (Web2-NgocTan)'
+2026-10-06 08:25:08.357 +07:00 [INF] Route matched with {action = "Login", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(Web2_NgocTan.Models.DTO.LoginRequestDTO) on controller Web2_NgocTan.Controllers.UserController (Web2-NgocTan).
+2026-10-06 08:25:08.570 +07:00 [INF] Executed DbCommand (20ms) [Parameters=[@normalizedEmail='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @normalizedEmail
+2026-10-06 08:25:08.681 +07:00 [INF] Executing BadRequestObjectResult, writing value of type 'System.String'.
+2026-10-06 08:25:08.683 +07:00 [INF] Executed action Web2_NgocTan.Controllers.UserController.Login (Web2-NgocTan) in 324.3693ms
+2026-10-06 08:25:08.685 +07:00 [INF] Executed endpoint 'Web2_NgocTan.Controllers.UserController.Login (Web2-NgocTan)'
+2026-10-06 08:25:08.689 +07:00 [INF] Request finished HTTP/2 POST https://localhost:7276/api/User/Login - 400 null text/plain; charset=utf-8 345.53ms
+2026-10-06 08:25:25.390 +07:00 [INF] Request starting HTTP/2 POST https://localhost:7276/api/User/Login - application/json 47
+2026-10-06 08:25:25.392 +07:00 [INF] Executing endpoint 'Web2_NgocTan.Controllers.UserController.Login (Web2-NgocTan)'
+2026-10-06 08:25:25.393 +07:00 [INF] Route matched with {action = "Login", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(Web2_NgocTan.Models.DTO.LoginRequestDTO) on controller Web2_NgocTan.Controllers.UserController (Web2-NgocTan).
+2026-10-06 08:25:25.482 +07:00 [INF] Executed DbCommand (7ms) [Parameters=[@normalizedEmail='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @normalizedEmail
+2026-10-06 08:25:25.563 +07:00 [INF] Executed DbCommand (3ms) [Parameters=[@userId='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @userId
+2026-10-06 08:25:25.587 +07:00 [INF] Executing OkObjectResult, writing value of type 'Web2_NgocTan.Models.DTO.LoginResponseDTO'.
+2026-10-06 08:25:25.589 +07:00 [INF] Executed action Web2_NgocTan.Controllers.UserController.Login (Web2-NgocTan) in 194.9369ms
+2026-10-06 08:25:25.590 +07:00 [INF] Executed endpoint 'Web2_NgocTan.Controllers.UserController.Login (Web2-NgocTan)'
+2026-10-06 08:25:25.591 +07:00 [INF] Request finished HTTP/2 POST https://localhost:7276/api/User/Login - 200 null application/json; charset=utf-8 200.9948ms
+2026-10-06 08:25:59.834 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7276/api/Books/get-all-books?isAscending=true&pageNumber=1&pageSize=100 - null null
+2026-10-06 08:25:59.881 +07:00 [INF] Executing endpoint 'Web2_NgocTan.Controllers.BooksController.GetAll (Web2-NgocTan)'
+2026-10-06 08:25:59.882 +07:00 [INF] Route matched with {action = "GetAll", controller = "Books"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAll(System.String, System.String, System.String, Boolean, Int32, Int32) on controller Web2_NgocTan.Controllers.BooksController (Web2-NgocTan).
+2026-10-06 08:25:59.884 +07:00 [INF] GetAll Book Action method was invoked
+2026-10-06 08:25:59.884 +07:00 [WRN] This is a warning log
+2026-10-06 08:25:59.884 +07:00 [ERR] This is a error log
+2026-10-06 08:25:59.932 +07:00 [INF] Executed DbCommand (11ms) [Parameters=[@p='?' (DbType = Int32), @p1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [b0].[Id], [b0].[Title], [b0].[Description], [b0].[IsRead], CASE
+    WHEN [b0].[IsRead] = CAST(1 AS bit) THEN [b0].[DateRead]
+END, CASE
+    WHEN [b0].[IsRead] = CAST(1 AS bit) THEN [b0].[Rate]
+END, [b0].[Genre], [b0].[CoverUrl], [p].[Name], [p].[Id], [s].[FullName], [s].[Id], [s].[Id0]
+FROM (
+    SELECT [b].[Id], [b].[CoverUrl], [b].[DateRead], [b].[Description], [b].[Genre], [b].[IsRead], [b].[PublisherID], [b].[Rate], [b].[Title]
+    FROM [Books] AS [b]
+    ORDER BY (SELECT 1)
+    OFFSET @p ROWS FETCH NEXT @p1 ROWS ONLY
+) AS [b0]
+INNER JOIN [Publishers] AS [p] ON [b0].[PublisherID] = [p].[Id]
+LEFT JOIN (
+    SELECT [a].[FullName], [b1].[Id], [a].[Id] AS [Id0], [b1].[BookId]
+    FROM [Books_Authors] AS [b1]
+    INNER JOIN [Authors] AS [a] ON [b1].[AuthorId] = [a].[Id]
+) AS [s] ON [b0].[Id] = [s].[BookId]
+ORDER BY [b0].[Id], [p].[Id], [s].[Id]
+2026-10-06 08:25:59.933 +07:00 [INF] Finished GetAllBook request with data [{"Id":9,"Title":"L\u00E0m \u0110\u0129-V\u0169 Tr\u1ECDng Ph\u1EE5ng","Description":"Truy\u1EC7n ng\u1EAFn","IsRead":true,"DateRead":"2026-09-30T08:33:53.456","Rate":5,"Genre":"V\u0103n H\u1ECDc","CoverUrl":"string","PublisherName":"Nh\u00E0 xu\u1EA5t b\u1EA3n Tr\u1EBB","AuthorNames":["V\u0169 Tr\u1ECDng Ph\u1EE5ng"]},{"Id":10,"Title":"A","Description":"Hehe","IsRead":true,"DateRead":"2026-09-30T09:05:15","Rate":5,"Genre":"Truy\u1EC7n C\u01B0\u1EDDi","CoverUrl":"string","PublisherName":"Nh\u00E0 xu\u1EA5t b\u1EA3n Tr\u1EBB","AuthorNames":[]}]
+2026-10-06 08:25:59.934 +07:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Web2_NgocTan.Models.DTO.BookWithAuthorAndPublisherDTO, Web2-NgocTan, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-10-06 08:25:59.935 +07:00 [INF] Executed action Web2_NgocTan.Controllers.BooksController.GetAll (Web2-NgocTan) in 51.7383ms
+2026-10-06 08:25:59.936 +07:00 [INF] Executed endpoint 'Web2_NgocTan.Controllers.BooksController.GetAll (Web2-NgocTan)'
+2026-10-06 08:25:59.937 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7276/api/Books/get-all-books?isAscending=true&pageNumber=1&pageSize=100 - 200 null application/json; charset=utf-8 102.7205ms

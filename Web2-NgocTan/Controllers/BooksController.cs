@@ -8,7 +8,7 @@ namespace Web2_NgocTan.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    [Authorize]
+    // [Authorize]
     public class BooksController : ControllerBase
     {
         private readonly IBookRepository _bookRepository;
@@ -21,8 +21,8 @@ namespace Web2_NgocTan.Controllers
         }
 
         [HttpGet("get-all-books")]
-        [Authorize(Roles = "Read")]
-        public IActionResult GetAll([FromQuery] string? filterOn, [FromQuery] string? filterQuery, [FromQuery] string? sortBy, [FromQuery] bool isAscending = true, [FromQuery] int pageNumber = 1, [FromQuery] int pageSize = 10)
+        // [Authorize(Roles = "Read")]
+        public IActionResult GetAll([FromQuery] string? filterOn, [FromQuery] string? filterQuery, [FromQuery] string? sortBy, [FromQuery] bool isAscending = true, [FromQuery] int pageNumber = 1, [FromQuery] int pageSize = 100)
         {
             _logger.LogInformation("GetAll Book Action method was invoked");
             _logger.LogWarning("This is a warning log");
@@ -35,14 +35,14 @@ namespace Web2_NgocTan.Controllers
         }
 
         [HttpGet("get-book-by-id/{id}")]
-        [Authorize(Roles = "Read")]
+        // [Authorize(Roles = "Read")]
         public IActionResult GetBookById([FromRoute] int id)
         {
             return Ok(_bookRepository.GetBookById(id));
         }
 
         [HttpPost("add-book")]
-        [Authorize(Roles = "Write")]
+        // [Authorize(Roles = "Write")]
         public IActionResult AddBook([FromBody] AddBookRequestDTO addBookRequestDTO)
         {
             if (ValidateAddBook(addBookRequestDTO))
@@ -61,7 +61,7 @@ namespace Web2_NgocTan.Controllers
         }
 
         [HttpPut("update-book-by-id/{id}")]
-        [Authorize(Roles = "Write")]
+        // [Authorize(Roles = "Write")]
         public IActionResult UpdateBookById(int id, [FromBody] AddBookRequestDTO dto)
         {
             try
@@ -80,7 +80,7 @@ namespace Web2_NgocTan.Controllers
         }
 
         [HttpDelete("delete-book-by-id/{id}")]
-        [Authorize(Roles = "Write")]
+        // [Authorize(Roles = "Write")]
         public IActionResult DeleteBookById(int id)
         {
             return Ok(_bookRepository.DeleteBookById(id));

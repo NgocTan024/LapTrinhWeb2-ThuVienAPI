@@ -1,0 +1,56 @@
+2026-10-06 08:04:49.857 +07:00 [INF] User profile is available. Using 'C:\Users\User\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-10-06 08:04:50.162 +07:00 [INF] Now listening on: https://localhost:7276
+2026-10-06 08:04:50.164 +07:00 [INF] Now listening on: http://localhost:5158
+2026-10-06 08:04:50.691 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-10-06 08:04:50.702 +07:00 [INF] Hosting environment: Development
+2026-10-06 08:04:50.704 +07:00 [INF] Content root path: E:\Web2-NgocTan\Web2-NgocTan
+2026-10-06 08:04:50.837 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7276/swagger/index.html - null null
+2026-10-06 08:04:51.104 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7276/swagger/index.html - 304 null null 271.9791ms
+2026-10-06 08:04:51.151 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7276/swagger/swagger-ui-standalone-preset.js - null null
+2026-10-06 08:04:51.119 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7276/swagger/swagger-ui-bundle.js - null null
+2026-10-06 08:04:51.119 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7276/_framework/aspnetcore-browser-refresh.js - null null
+2026-10-06 08:04:51.119 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7276/swagger/index.css - null null
+2026-10-06 08:04:51.119 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7276/swagger/swagger-ui.css - null null
+2026-10-06 08:04:51.152 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7276/swagger/index.js - null null
+2026-10-06 08:04:51.156 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7276/_vs/browserLink - null null
+2026-10-06 08:04:51.175 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7276/swagger/index.js - 304 null null 23.5799ms
+2026-10-06 08:04:51.180 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7276/_framework/aspnetcore-browser-refresh.js - 200 16509 application/javascript; charset=utf-8 60.5043ms
+2026-10-06 08:04:51.183 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7276/swagger/swagger-ui-standalone-preset.js - 304 null null 56.5382ms
+2026-10-06 08:04:51.183 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7276/swagger/swagger-ui-bundle.js - 304 null null 63.9226ms
+2026-10-06 08:04:51.183 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7276/swagger/index.css - 304 null null 63.6447ms
+2026-10-06 08:04:51.183 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7276/swagger/swagger-ui.css - 304 null null 63.5811ms
+2026-10-06 08:04:51.220 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7276/_vs/browserLink - 200 null text/javascript; charset=UTF-8 64.073ms
+2026-10-06 08:04:51.289 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7276/swagger/v1/swagger.json - null null
+2026-10-06 08:04:51.308 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7276/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 19.4581ms
+2026-10-06 08:04:58.562 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:7276/api/Books/get-all-books?filterOn=&filterQuery=&sortBy=&isAscending=True - null null
+2026-10-06 08:04:58.606 +07:00 [INF] Executing endpoint 'Web2_NgocTan.Controllers.BooksController.GetAll (Web2-NgocTan)'
+2026-10-06 08:04:58.621 +07:00 [INF] Route matched with {action = "GetAll", controller = "Books"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAll(System.String, System.String, System.String, Boolean, Int32, Int32) on controller Web2_NgocTan.Controllers.BooksController (Web2-NgocTan).
+2026-10-06 08:04:58.736 +07:00 [INF] GetAll Book Action method was invoked
+2026-10-06 08:04:58.737 +07:00 [WRN] This is a warning log
+2026-10-06 08:04:58.738 +07:00 [ERR] This is a error log
+2026-10-06 08:04:59.466 +07:00 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+2026-10-06 08:04:59.468 +07:00 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+2026-10-06 08:04:59.800 +07:00 [INF] Executed DbCommand (39ms) [Parameters=[@p='?' (DbType = Int32), @p1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [b0].[Id], [b0].[Title], [b0].[Description], [b0].[IsRead], CASE
+    WHEN [b0].[IsRead] = CAST(1 AS bit) THEN [b0].[DateRead]
+END, CASE
+    WHEN [b0].[IsRead] = CAST(1 AS bit) THEN [b0].[Rate]
+END, [b0].[Genre], [b0].[CoverUrl], [p].[Name], [p].[Id], [s].[FullName], [s].[Id], [s].[Id0]
+FROM (
+    SELECT [b].[Id], [b].[CoverUrl], [b].[DateRead], [b].[Description], [b].[Genre], [b].[IsRead], [b].[PublisherID], [b].[Rate], [b].[Title]
+    FROM [Books] AS [b]
+    ORDER BY (SELECT 1)
+    OFFSET @p ROWS FETCH NEXT @p1 ROWS ONLY
+) AS [b0]
+INNER JOIN [Publishers] AS [p] ON [b0].[PublisherID] = [p].[Id]
+LEFT JOIN (
+    SELECT [a].[FullName], [b1].[Id], [a].[Id] AS [Id0], [b1].[BookId]
+    FROM [Books_Authors] AS [b1]
+    INNER JOIN [Authors] AS [a] ON [b1].[AuthorId] = [a].[Id]
+) AS [s] ON [b0].[Id] = [s].[BookId]
+ORDER BY [b0].[Id], [p].[Id], [s].[Id]
+2026-10-06 08:04:59.832 +07:00 [INF] Finished GetAllBook request with data [{"Id":9,"Title":"L\u00E0m \u0110\u0129-V\u0169 Tr\u1ECDng Ph\u1EE5ng","Description":"Truy\u1EC7n ng\u1EAFn","IsRead":true,"DateRead":"2026-09-30T08:33:53.456","Rate":5,"Genre":"V\u0103n H\u1ECDc","CoverUrl":"string","PublisherName":"Nh\u00E0 xu\u1EA5t b\u1EA3n Tr\u1EBB","AuthorNames":["V\u0169 Tr\u1ECDng Ph\u1EE5ng"]},{"Id":10,"Title":"A","Description":"Hehe","IsRead":true,"DateRead":"2026-09-30T09:05:15.804","Rate":5,"Genre":"Truy\u1EC7n \u01B0\u1EDDi","CoverUrl":"string","PublisherName":"T\u00E2n 1 c\u00FA","AuthorNames":["T\u00E2n"]}]
+2026-10-06 08:04:59.838 +07:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Web2_NgocTan.Models.DTO.BookWithAuthorAndPublisherDTO, Web2-NgocTan, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-10-06 08:04:59.845 +07:00 [INF] Executed action Web2_NgocTan.Controllers.BooksController.GetAll (Web2-NgocTan) in 1219.746ms
+2026-10-06 08:04:59.846 +07:00 [INF] Executed endpoint 'Web2_NgocTan.Controllers.BooksController.GetAll (Web2-NgocTan)'
+2026-10-06 08:04:59.853 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:7276/api/Books/get-all-books?filterOn=&filterQuery=&sortBy=&isAscending=True - 200 null application/json; charset=utf-8 1291.9796ms

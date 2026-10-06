@@ -1,0 +1,56 @@
+2026-10-06 07:57:03.260 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:7276/api/Publishers/get-all-publisher - null null
+2026-10-06 07:57:03.266 +07:00 [INF] Executing endpoint 'Web2_NgocTan.Controllers.PublishersController.GetAllPublisher (Web2-NgocTan)'
+2026-10-06 07:57:03.268 +07:00 [INF] Route matched with {action = "GetAllPublisher", controller = "Publishers"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAllPublisher() on controller Web2_NgocTan.Controllers.PublishersController (Web2-NgocTan).
+2026-10-06 07:57:03.315 +07:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[Name]
+FROM [Publishers] AS [p]
+2026-10-06 07:57:03.318 +07:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Web2_NgocTan.Models.DTO.PublisherDTO, Web2-NgocTan, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-10-06 07:57:03.320 +07:00 [INF] Executed action Web2_NgocTan.Controllers.PublishersController.GetAllPublisher (Web2-NgocTan) in 50.413ms
+2026-10-06 07:57:03.321 +07:00 [INF] Executed endpoint 'Web2_NgocTan.Controllers.PublishersController.GetAllPublisher (Web2-NgocTan)'
+2026-10-06 07:57:03.323 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:7276/api/Publishers/get-all-publisher - 200 null application/json; charset=utf-8 64.0469ms
+2026-10-06 07:57:06.584 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:7276/api/Authors/get-all-author - null null
+2026-10-06 07:57:06.588 +07:00 [INF] Executing endpoint 'Web2_NgocTan.Controllers.AuthorsController.GetAllAuthor (Web2-NgocTan)'
+2026-10-06 07:57:06.589 +07:00 [INF] Route matched with {action = "GetAllAuthor", controller = "Authors"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAllAuthor() on controller Web2_NgocTan.Controllers.AuthorsController (Web2-NgocTan).
+2026-10-06 07:57:06.692 +07:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[FullName]
+FROM [Authors] AS [a]
+2026-10-06 07:57:06.694 +07:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Web2_NgocTan.Models.DTO.AuthorDTO, Web2-NgocTan, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-10-06 07:57:06.695 +07:00 [INF] Executed action Web2_NgocTan.Controllers.AuthorsController.GetAllAuthor (Web2-NgocTan) in 104.047ms
+2026-10-06 07:57:06.696 +07:00 [INF] Executed endpoint 'Web2_NgocTan.Controllers.AuthorsController.GetAllAuthor (Web2-NgocTan)'
+2026-10-06 07:57:06.697 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:7276/api/Authors/get-all-author - 200 null application/json; charset=utf-8 113.3674ms
+2026-10-06 07:57:08.335 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:7276/api/Books/get-all-books?filterOn=&filterQuery=&sortBy=&isAscending=True - null null
+2026-10-06 07:57:08.340 +07:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Read)
+2026-10-06 07:57:08.341 +07:00 [INF] AuthenticationScheme: Bearer was challenged.
+2026-10-06 07:57:08.342 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:7276/api/Books/get-all-books?filterOn=&filterQuery=&sortBy=&isAscending=True - 401 0 null 7.1346ms
+2026-10-06 07:57:09.783 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:7276/api/Books/get-all-books?filterOn=&filterQuery=&sortBy=&isAscending=True - null null
+2026-10-06 07:57:09.787 +07:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Read)
+2026-10-06 07:57:09.789 +07:00 [INF] AuthenticationScheme: Bearer was challenged.
+2026-10-06 07:57:09.790 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:7276/api/Books/get-all-books?filterOn=&filterQuery=&sortBy=&isAscending=True - 401 0 null 7.0871ms
+2026-10-06 07:57:11.947 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:7276/api/Books/get-all-books?filterOn=&filterQuery=&sortBy=&isAscending=True - null null
+2026-10-06 07:57:11.951 +07:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Read)
+2026-10-06 07:57:11.952 +07:00 [INF] AuthenticationScheme: Bearer was challenged.
+2026-10-06 07:57:11.954 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:7276/api/Books/get-all-books?filterOn=&filterQuery=&sortBy=&isAscending=True - 401 0 null 6.5828ms
+2026-10-06 07:57:34.295 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7276/api/Books/get-all-books?isAscending=true&pageNumber=1&pageSize=10 - null null
+2026-10-06 07:57:34.298 +07:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Read)
+2026-10-06 07:57:34.298 +07:00 [INF] AuthenticationScheme: Bearer was challenged.
+2026-10-06 07:57:34.299 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7276/api/Books/get-all-books?isAscending=true&pageNumber=1&pageSize=10 - 401 0 null 3.5113ms
+2026-10-06 07:57:44.722 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7276/api/Books/get-book-by-id/1 - null null
+2026-10-06 07:57:44.725 +07:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Read)
+2026-10-06 07:57:44.725 +07:00 [INF] AuthenticationScheme: Bearer was challenged.
+2026-10-06 07:57:44.727 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7276/api/Books/get-book-by-id/1 - 401 0 null 5.0049ms
+2026-10-06 07:57:50.180 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7276/api/Books/get-book-by-id/3 - null null
+2026-10-06 07:57:50.182 +07:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Read)
+2026-10-06 07:57:50.182 +07:00 [INF] AuthenticationScheme: Bearer was challenged.
+2026-10-06 07:57:50.183 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7276/api/Books/get-book-by-id/3 - 401 0 null 3.7022ms
